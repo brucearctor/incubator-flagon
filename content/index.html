@@ -10,13 +10,13 @@
   <meta name="description" content="The homepage for Apache Flagon">
 
   <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/assets/jquery.min.js"></script>
   <script src="/semantic/dist/semantic.min.js"></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/assets/d3.v4.min.js"></script>
   <script src="/js/main.js"></script>
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://flagon.incubator.apache.org/">
+  <link rel="canonical" href="https://flagon.apache.org/">
   <link rel="alternate" type="application/rss+xml" title="Apache Flagon" href="/feed.xml">
 
   
@@ -35,23 +35,15 @@
       <div class="ui dropdown item">
         Products
         <div class="menu">
-          <a class="item" href="/stack">Stack</a>
           <a class="item" href="/userale">UserALE</a>
           <a class="item" href="/distill">Distill</a>
-          <a class="item" href="/tap">Tap</a>
-          <a class="item" href="/stout">Stout</a>
         </div>
       </div>
       <div class="ui dropdown item">
         <a href="/docs">Docs</a>
         <div class="menu">
-          <a class="item" href="/docs/stack">Stack</a>
-          <a class="item" href="/docs/userale">UserALE</a>
           <a class="item" href="/docs/useralejs">UserALE.js</a>
-          <a class="item" href="/docs/useralepy">UserALE.py</a>
           <a class="item" href="/docs/distill">Distill</a>
-          <a class="item" href="/docs/tap">Tap</a>
-          <a class="item" href="/docs/stout">Stout</a>
         </div>
       </div>
       <a class="item" href="/releases">Releases</a>
@@ -72,18 +64,18 @@
 <div class="ui very padded vertical segment">
   <div class="ui center aligned text container">
     <p>
-      Apache Flagon is an open-soure, thin-client behavioral logging capability useful for business analytics, usage analytics, usability and user testing. It's also for science into how information technology is used. Flagon supports a range of streamlined deployment schemas ranging from single webpage analysis to enterprise level monitoring, making it easy to collect data without heavy modification of your own code. Using Elastic products, Flagon makes it easy to scale, integrate other services, access your data and get the insights you need out of it. In the spirit of customization, the Apache Flagon project collects a number of modular products and capabilities to help you build the stack that suites your needs.
+      Apache Flagon is an open-source, thin-client behavioral logging and analytics suite for business analytics, usage analytics, usability, and user testing. Flagon supports a range of streamlined deployment architectures ranging from single-webpage analysis to cloud-native OpenTelemetry observability (Grafana + Loki + Tempo), OpenSearch, All-Apache Lakehouse (Kafka + Flink + Iceberg + Doris + Superset), and the Elastic Stack (ELK). In the spirit of customization, Apache Flagon combines modular instrumentation and Python analytics capabilities to help you build the stack that suits your needs.
     </p>
 
     <br>
 
-    <a class="ui big red button" href="/docs/stack/">
+    <a class="ui big red button" href="/docs/useralejs/">
       Get Started
     </a>
     <a class="ui big blue button" href="/releases">
       Download Flagon
     </a>
-    <a class="ui big yellow button" href="mailto:dev-subscribe@flagon.incubator.apache.org">
+    <a class="ui big yellow button" href="mailto:dev-subscribe@flagon.apache.org">
       Join our Dev List
     </a>
   </div>
@@ -93,7 +85,7 @@
   <div class="ui text container">
     <div class="ui two column middle aligned grid">
       <div class="column">
-        With a single line of code capture all of your users' behavior on your web page with enough resolution and granularity for advanced behavioral modeling. Apache UserALE is Flagon's free, open-source application for thin-client behavioral logging. It's perfect for business analytics and enterprise application monitoring, but powerful enough for UI/UX research and user-testing. Check out our slick demo!
+        With a single line of code, capture your users' behavior on your web page with enough resolution and granularity for advanced behavioral modeling. Apache UserALE.js is Flagon's free, open-source client for thin-client behavioral logging, featuring pluggable exporters (`http-json`, `otlp`, `proto-json`, `websocket`), W3C Trace Context (`traceparent`) correlation, and two-layer session replay. Check out our interactive demo below!
       </div>
       <div class="center aligned column">
         <a href="/userale">
@@ -106,136 +98,276 @@
 
 <div class="ui  very padded vertical segment">
   <div class="ui center aligned text container">
-    <h2 class="ui  header">UserALE.js</h2>
+    <h2 class="ui  header">Interactive UserALE.js 2.5 Live Telemetry Demo</h2>
     <p>
-      UserALE.js is the DOM/JavaScript client for UserALE.  Every user activity is logged and sent to the UserALE backend for storage and analysis by Distill.
+      Interact with the controls below to inspect live telemetry generated in your browser by <strong>UserALE.js 2.5</strong>. Switch between <strong>UserALE Flat JSON</strong>, <strong>OpenTelemetry (OTLP/JSON)</strong>, and <strong>Protobuf v1 (<code>LogBatch</code>)</strong> wire formats in real time.
     </p>
-    <div class="ui basic vertical segment">
-      <div id="start-button" class="ui green button">Start Logging</div>
-      <div id="stop-button" class="ui red button">Pause Logging</div>
+    <div class="ui basic vertical segment" data-userale-ignore="true">
+      <div id="start-button" class="ui green button"><i class="play icon"></i>Start Logging</div>
+      <div id="stop-button" class="ui red button"><i class="pause icon"></i>Pause Logging</div>
+      <div id="clear-button" class="ui basic  button"><i class="trash alternate outline icon"></i>Clear Feed</div>
     </div>
   </div>
 
   <div class="ui container">
-    <div class="ui equal height two column grid">
-      <div class="center aligned column">
-        <div class="ui basic row segment">
-          <h4 class="ui dividing header">Buttons</h4>
-          <div class="ui blue button">Blue</div>
-          <div class="ui yellow button">Yellow</div>
-          <div class="ui green button">Green</div>
-          <div class="ui red button">Red</div>
+    <div class="ui stackable two column grid">
+      <div class="eight wide column">
+        <div class="ui basic vertical segment">
+          <h4 class="ui dividing  header">1. Standard UI Interactions</h4>
+          <div id="demo-blue-button" class="ui blue button">Blue</div>
+          <div id="demo-yellow-button" class="ui yellow button">Yellow</div>
+          <div id="demo-green-button" class="ui green button">Green</div>
+          <div id="demo-red-button" class="ui red button">Red</div>
         </div>
 
-        <div class="ui form">
-          <h4 class="ui dividing header">Checkboxes</h4>
-          <div class="field">
-            <div class="two fields">
-              <div class="field">
-                <input type="checkbox">
-                <label>Checked!</label>
+        <div class="ui basic vertical segment">
+          <h4 class="ui dividing  header">2. Behavioral &amp; Session Replay Signals (2.5)</h4>
+          <p style="font-size: 0.92em; opacity: 0.85;">
+            Rapidly click the button below 3+ times to trigger <code>RageClickDetector</code> (<code>rage_click</code> + normalized <code>targetRect</code> bounding box), or mutate the DOM to emit a debounced <code>mutation</code> summary log.
+          </p>
+          <button id="rage-click-button" type="button" class="ui orange button">
+            <i class="bolt icon"></i>Click 3x Rapidly (Rage Click)
+          </button>
+          <button id="mutate-dom-button" type="button" class="ui teal button">
+            <i class="plus square outline icon"></i>Mutate DOM (+ Node)
+          </button>
+          <div id="mutation-sandbox" style="margin-top: 0.75em;"></div>
+        </div>
+
+        <div class="ui  form">
+          <h4 class="ui dividing  header">3. Forms &amp; Privacy Controls (<code>data-userale-redact</code>)</h4>
+          <div class="two fields">
+            <div class="field">
+              <label>Standard Text Input</label>
+              <input id="demo-standard-input" type="text" placeholder="Type to log input details...">
+            </div>
+            <div class="field">
+              <label>PII-Redacted Input (<code>data-userale-redact</code>)</label>
+              <input id="demo-redact-input" type="text" data-userale-redact="true" placeholder="Sensitive input is scrubbed to [REDACTED]">
+            </div>
+          </div>
+
+          <div class="two fields">
+            <div class="field">
+              <label>Checkboxes &amp; Radios</label>
+              <div class="inline fields" style="margin-top: 0.5em;">
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>Opt-in</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="demo-checkbox">
+                    <label>Yes</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="demo-checkbox">
+                    <label>No</label>
+                  </div>
+                </div>
               </div>
-              <div class="field">
-                <div class="two fields">
-                  <div class="field">
-                    <div class="ui radio checkbox">
-                      <input type="radio" name="demo-checkbox">
-                      <label>Yes</label>
-                    </div>
-                  </div>
-                  <div class="field">
-                    <div class="ui radio checkbox">
-                      <input type="radio" name="demo-checkbox">
-                      <label>No</label>
-                    </div>
-                  </div>
+            </div>
+
+            <div class="field">
+              <label>Flagon Component</label>
+              <div id="demo-dropdown" class="ui fluid selection dropdown">
+                <input type="hidden" name="flagon-component">
+                <i class="dropdown icon"></i>
+                <div class="default text">Select Component</div>
+                <div class="menu">
+                  <div class="item" data-value="userale">UserALE.js 2.5</div>
+                  <div class="item" data-value="userale-ext">UserALE Browser Extension (MV3)</div>
+                  <div class="item" data-value="distill">Distill 2.5 (Python Analytics)</div>
+                  <div class="item" data-value="otel">OpenTelemetry + Grafana Stack</div>
+                  <div class="item" data-value="opensearch">OpenSearch + Data Prepper Stack</div>
+                  <div class="item" data-value="lakehouse">Apache Iceberg Lakehouse Stack</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <h4 class="ui dividing header">Inputs</h4>
-          <div class="field">
-            <div class="two fields">
-              <div class="field">
-                <div class="ui labeled input">
-                  <div class="ui grey label">Text</div>
-                  <input type="text">
-                </div>
-              </div>
-
-              <div class="field">
-                <div id="demo-dropdown" class="ui fluid selection dropdown">
-                  <input type="hidden" name="flagon-component">
-                  <i class="dropdown icon"></i>
-                  <div class="default text">Select Component</div>
-                  <div class="menu">
-                    <div class="item">UserALE</div>
-                    <div class="item">Distill</div>
-                    <div class="item">Tap</div>
-                    <div class="item">Stout</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <h4 class="ui dividing header">Maps</h4>
-          <div class="ui basic row segment">
+          <h4 class="ui dividing  header">4. Spatial Viewport &amp; Map Interaction</h4>
+          <div class="ui basic row segment" style="padding: 0;">
             <div id="map-example"></div>
           </div>
-
-
         </div>
       </div>
 
-      <div id="log-feed" class="center aligned column">
-        <div class="ui fluid row segment">
-
+      <div class="eight wide column" data-userale-ignore="true">
+        <div class="ui secondary Stackable menu" style="margin-bottom: 0.5em;">
+          <div class="header item " style="padding-left: 0;">Wire Format:</div>
+          <div class="ui small buttons" id="wire-format-selector">
+            <button type="button" class="ui active blue button" data-format="http-json">UserALE JSON</button>
+            <button type="button" class="ui button" data-format="otlp">OTLP/JSON (OpenTelemetry)</button>
+            <button type="button" class="ui button" data-format="proto-json">Protobuf v1 JSON</button>
+          </div>
         </div>
+        <div id="log-feed" data-userale-ignore="true"></div>
       </div>
     </div>
   </div>
 </div>
 
-
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-<script src="/js/userale-demo.min.js" data-url=""></script>
+<link rel="stylesheet" href="/assets/leaflet/leaflet.css" />
+<script src="/assets/leaflet/leaflet.js"></script>
+<script
+  src="/js/userale-demo.min.js"
+  data-autostart="true"
+  data-log-details="true"
+  data-tool="flagon-website-demo"
+  data-version="2.5.0"
+></script>
 
 <script>
   $(document).ready(function () {
+    var selectedFormat = 'http-json';
+    var recentLogs = [];
+    var mutationCount = 0;
+
     $('#demo-dropdown').dropdown();
     $('.ui.checkbox').checkbox();
 
-    $('#start-button').on('click', userale.start);
-    $('#stop-button').on('click', userale.stop);
-    userale.options({
-      logCb: addLog,
-      noSend: true
+    // Register a no-op exporter so the interactive demo never makes network requests
+    if (window.userale && typeof userale.registerExporter === 'function') {
+      userale.registerExporter({
+        export: function () {
+          return Promise.resolve({ success: true, statusCode: 200 });
+        }
+      });
+    }
+
+    // Enable W3C trace context & two-layer session replay / DOM mutation observation
+    if (window.userale && typeof userale.options === 'function') {
+      userale.options({
+        toolName: 'flagon-website-demo',
+        toolVersion: '2.5.0',
+        logDetails: true,
+        observeMutations: true,
+        traceContext: function () {
+          return {
+            traceId: '4bf92f3577b34da6a3ce929d0e0e4736',
+            spanId: '00f067aa0ba902b7'
+          };
+        }
+      });
+    }
+
+    if (window.userale && typeof userale.startSessionReplay === 'function') {
+      userale.startSessionReplay({
+        observeMutations: true,
+        detectRageClicks: true
+      });
+    }
+
+    function formatPayload(log) {
+      var cfg = window.userale && typeof userale.options === 'function' ? userale.options() : {};
+      if (selectedFormat === 'otlp' && window.userale && typeof userale.toOtlpExportLogsServiceRequest === 'function') {
+        return userale.toOtlpExportLogsServiceRequest([log], cfg);
+      }
+      if (selectedFormat === 'proto-json' && window.userale && typeof userale.toProtoLogBatch === 'function') {
+        return userale.toProtoLogBatch([log], cfg);
+      }
+      return log;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
+    function renderFeed() {
+      var $feed = $('#log-feed');
+      $feed.empty();
+      for (var i = 0; i < recentLogs.length; i++) {
+        var entry = recentLogs[i];
+        var badgeColor = 'blue';
+        if (entry.type === 'rage_click' || entry.logType === 'replay') badgeColor = 'orange';
+        else if (entry.logType === 'mutation') badgeColor = 'teal';
+        else if (entry.logType === 'custom') badgeColor = 'purple';
+
+        var payloadJson = JSON.stringify(formatPayload(entry), null, 2);
+        var cardHtml =
+          '<div class="log-card">' +
+            '<div class="log-card-header">' +
+              '<span class="ui mini ' + badgeColor + ' label">' + escapeHtml(entry.logType || 'raw') + '</span> ' +
+              '<span class="ui mini basic label">' + escapeHtml(entry.type || 'event') + '</span> ' +
+              '<code class="log-target">' + escapeHtml(entry.target || 'document') + '</code>' +
+            '</div>' +
+            '<pre class="log-json">' + escapeHtml(payloadJson) + '</pre>' +
+          '</div>';
+        $feed.append(cardHtml);
+      }
+    }
+
+    if (window.userale && typeof userale.addCallbacks === 'function') {
+      userale.addCallbacks({
+        websiteDemoFeed: function (log) {
+          if (!log) return log;
+          // Skip high-frequency hover noise in the visual demo feed
+          if (log.type === 'mouseover') {
+            return log;
+          }
+          var targetStr = String(log.target || '');
+          var pathStr = Array.isArray(log.path) ? log.path.join(' ') : '';
+          // Ignore interactions inside the log feed panel, wire format switcher, or start/stop/clear controls
+          if (
+            targetStr.indexOf('log-') !== -1 ||
+            pathStr.indexOf('log-feed') !== -1 ||
+            pathStr.indexOf('wire-format-selector') !== -1 ||
+            targetStr.indexOf('start-button') !== -1 ||
+            targetStr.indexOf('stop-button') !== -1 ||
+            targetStr.indexOf('clear-button') !== -1
+          ) {
+            return false;
+          }
+          recentLogs.unshift(Object.assign({}, log));
+          if (recentLogs.length > 8) {
+            recentLogs.pop();
+          }
+          renderFeed();
+          return log;
+        }
+      });
+    }
+
+    $('#start-button').on('click', function () {
+      if (window.userale) userale.start();
+    });
+    $('#stop-button').on('click', function () {
+      if (window.userale) userale.stop();
+    });
+    $('#clear-button').on('click', function () {
+      recentLogs = [];
+      renderFeed();
+    });
+
+    $('#mutate-dom-button').on('click', function () {
+      mutationCount += 1;
+      var $chip = $(
+        '<span class="ui tiny teal label" style="margin: 2px;">' +
+          'Dynamic Node #' + mutationCount +
+        '</span>'
+      );
+      $('#mutation-sandbox').append($chip);
+    });
+
+    $('#wire-format-selector button').on('click', function () {
+      $('#wire-format-selector button').removeClass('active blue');
+      $(this).addClass('active blue');
+      selectedFormat = $(this).data('format');
+      renderFeed();
     });
 
     var map = L.map('map-example').setView([42.3601, -71.0589], 13);
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-
-    function addLog(log) {
-      var html = '<div class="log ui fluid row segment">' + JSON.stringify(log) + '</div>';
-      $('#log-feed').prepend(html);
-    }
-
-    function clearLogs() {
-      setTimeout(function () {
-        var $feed = $('#log-feed .log');
-        if ($feed.length > 10) {
-          $feed.slice(9).remove();
-        }
-        clearLogs();
-      }, 1000);
-    }
-
-    clearLogs();
   });
 </script>
 
@@ -249,132 +381,7 @@
         </a>
       </div>
       <div class="column">
-        Process and control your own user event data. Apache Distill is Flagon's experimental, customizable analytics stack built in Python that interfaces directly with Elastic. It gives data scientists and developers the power to segment and model user data in Python or push modeling output to visual analytic applications. From simple aggregations to complex graph models of user workflow, Distill provides access to user data and the python libraries you love in a streamlined analytical pipeline.
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="ui very padded vertical segment">
-  <div class="ui text container">
-    <div class="ui two column middle aligned grid">
-      <div class="column">
-        Apache TAP is Flagon's experimental collection of specially modified D3 visual analytic libraries for exploring Apache UserALE.js data. You can explore them in our sandbox environment, or embed them in your own applications. With TAP, Gain insight from advanced sequential and graph models and reveal trends in usage across users of different types and experience, and trends across different versions of your application. Try out our Bowie plot demo below!
-      </div>
-      <div class="center aligned column">
-        <a href="/tap">
-          <img class="component-image" src="/images/tap.png">
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="ui inverted grey very padded vertical segment">
-  <div class="ui center aligned text container">
-    <h2 class="ui inverted header">The Bowie Plot</h2>
-    <p>
-      Tap uses the Bowie plot to present your users' micro-workflows and help you uncover insights into how your users interact with you apps.  Start on the left, with the activity that starts the workflow, sized by the frequency of the activity.  Next, the circles in the middle show the second activity in the workflow.  The circles are downselected and sized by a graph metric to help uncover a particular type of insight.  End on the right with the final activity of the workflow.
-    </p>
-  </div>
-
-  <div class="ui container">
-    <div class="ui padded grid">
-      <div class="four wide middle aligned column">
-        <div class="ui inverted form">
-          <h3 class="ui inverted header">Graph Metrics</h3>
-
-          <div class="grouped fields">
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="metric" value="out_degree" checked></input>
-                <label>Out Degree</label>
-              </div>
-            </div>
-
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="metric" value="in_degree"></input>
-                <label>In Degree</label>
-              </div>
-            </div>
-
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="metric" value="betweenness_cent_dir_weighted"></input>
-                <label>Weighted Betweenness</label>
-              </div>
-            </div>
-
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="metric" value="closeness_cent_dir_weighted"></input>
-                <label>Weighted Closeness</label>
-              </div>
-            </div>
-
-            <div class="field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="metric" value="closeness_cent_dir_unweighted"></input>
-                <label>Unweighted Closeness</label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="twelve wide center aligned column">
-        <div class="ui basic row segment">
-          <div id="bowie"></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="metric-explanation" class="ui center aligned text container"></div>
-  </div>
-</div>
-
-<script src="/js/bowiePlot.js"></script>
-<script>
-  $(document).ready(function () {
-    // Metric explanations
-    var metricExplanations = {
-      'out_degree': 'Out degree describes how often an activity was a source.  How often did a micro-workflow start with this activity?  This could indicate an entry point to your app or the start of a particularly common workflow.',
-      'in_degree': 'In degree describes how often an activity was a sink.  How often did a micro-workflow end with this activity?  This could indicate a final confirmation, exit navigation, or a place the user got stuck.',
-      'betweenness_cent_dir_weighted': 'Betweenness centrality describes how often an activity was passed through.  This indicates a common intermediate activity, like a busy intersection of your app.',
-      'closeness_cent_dir_weighted': 'Closeness centrality indicates how "close" an activity is to all others.  A higher closeness indicates an activity that was involved in more workflows.  Weighted closeness focuses on closeness to the most common activities, rather than to all equally.',
-      'closeness_cent_dir_unweighted': 'Closeness centrality indicates how "close" an activity is to all others.  A higher closeness indicates an activity that was involved in more workflows. Unweighted closeness focuses on closeness to all activities equally, regardless of how often each activity occurred.'
-    };
-
-    // Change metric
-    function changeMetric() {
-      var metric = $('input[name=metric]:checked').val();
-      $('#metric-explanation').html(metricExplanations[metric]);
-      Bowie.update(metric);
-    }
-
-    // Initialize radio buttons
-    $('.ui.radio.checkbox').checkbox({
-      onChange: changeMetric
-    });
-
-    // Initialize
-    Bowie.create();
-    changeMetric();
-  });
-</script>
-
-
-<div class="ui very padded vertical segment">
-  <div class="ui text container">
-    <div class="ui two column middle aligned grid">
-      <div class="center aligned column">
-        <a href="/stout">
-          <img class="component-image" src="/images/stout.png">
-        </a>
-      </div>
-      <div class="column">
-        Stage systematic user research on the web. Apache STOUT provides everyone the ability to perform user research on the web. Track research participants through different tasks with your web applications, or track them through different versions of the same web application. Apache STOUT allows you to manage user research participants and data collected through Apache UserALE and 3rd party form data services.
+        Process and control your own user event data. Apache Flagon Distill is Flagon's Python behavioral analytics toolkit that ingests UserALE flat JSON, Protobuf v1 `LogBatch` JSON, and OpenTelemetry OTLP/JSON payloads. It gives data scientists and developers the power to segment sessions, detect user frustration (rage clicks, dead clicks, cursor thrashing), compute spatial & viewport engagement heatmaps, and model user workflows with Markov transition matrices, Sankey diagrams, and conversion funnels.
       </div>
     </div>
   </div>
@@ -384,7 +391,7 @@
   <div class="ui text container">
     <h2 class="ui inverted header">About the Project</h2>
     <p>
-      Apache Flagon is a free and open-source, thin-client behavioral logging solution for business analytics, usage analytics, usability testing and scientific research. Formerly named Apache SensSoft, Flagon had its start at Draper for DARPA's XDATA program and represents the hard-work and innovations of an interdisciplinary team of data scientists, psychologists, developers and system architects. Apache Flagon is maintained by the people that love it under the mentorship and guidance of the Apache Incubator. Join the conversation and the community!
+      Apache Flagon is a free and open-source, thin-client behavioral logging solution for business analytics, usage analytics, usability testing and scientific research. Formerly named Apache SensSoft, Flagon had its start at Draper for DARPA's XDATA program and represents the hard-work and innovations of an interdisciplinary team of data scientists, psychologists, developers and system architects. Apache Flagon is maintained by the people that love it under the mentorship and guidance of the Apache Software Foundation. Join the conversation and the community!
     </p>
   </div>
 </div>
@@ -397,64 +404,49 @@
       <div class="column">
         <h4 class="ui inverted header">About</h4>
         <div class="ui inverted link list">
-          <a class="item" href="/stack">Stack</a>
           <a class="item" href="/userale">UserALE</a>
           <a class="item" href="/distill">Distill</a>
-          <a class="item" href="/tap">Tap</a>
-          <a class="item" href="/stout">Stout</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Docs</h4>
         <div class="ui inverted link list">
-          <a class="item" href="/docs/stack">Stack</a>
-          <a class="item" href="/docs/userale">UserALE</a>
-          <a class="item" href="/docs/useralejs">UserAle.js</a>
-          <a class="item" href="/docs/useralepy">UserAle.py</a>
+          <a class="item" href="/docs/useralejs">UserALE.js</a>
           <a class="item" href="/docs/distill">Distill</a>
-          <a class="item" href="/docs/tap">Tap</a>
-          <a class="item" href="/docs/stout">Stout</a>
+          <a class="item" href="/docs/deployments">Reference Deployments</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Community</h4>
         <div class="ui inverted link list">
-          <a class="item" href="https://github.com/apache?q=flagon">GitHub</a>
-          <a class="item" href="http://stackoverflow.com/questions/tagged/apache-flagon">StackOverflow</a>
-          <a class="item" href="https://issues.apache.org/jira/browse/FLAGON">Jira Issue Tracker</a>
-          <a class="item" href="https://cwiki.apache.org/confluence/display/FLAGON">Project Wiki</a>
-          <a class="item" href="https://twitter.com/ApacheFlagon">Twitter</a>
+          <a class="item" href="https://github.com/apache/flagon">GitHub</a>
+          <a class="item" href="https://stackoverflow.com/questions/tagged/apache-flagon">StackOverflow</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Apache</h4>
         <div class="ui inverted link list">
-          <a class="item" href="http://www.apache.org/">Apache Software Foundation</a>
-          <a class="item" href="http://www.apache.org/licenses/">License</a>
-          <a class="item" href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
-          <a class="item" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
-          <a class="item" href="http://www.apache.org/security/">Security</a>
+          <a class="item" href="https://www.apache.org/">Apache Software Foundation</a>
+          <a class="item" href="https://www.apache.org/licenses/">License</a>
+          <a class="item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+          <a class="item" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+          <a class="item" href="https://www.apache.org/security/">Security</a>
+          <a class="item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
         </div>
       </div>
     </div>
   </div>
   <div class="ui inverted vertical segment">
     <div class="ui two column middle aligned grid">
-      <div class="column">
-        Apache Flagon is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
-      </div>
       <div class="center aligned column">
-        Copyright &copy; 2021 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
-        Apache Flagon, Flagon, Apache, the Apache feather logo, the Apache Flagon logo and the Apache Incubator logo are trademarks of The Apache Software Foundation.
+        Copyright &copy; 2026 The Apache Software Foundation, Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+        Apache Flagon, Flagon, Apache, the Apache feather logo, and the Apache Flagon logo are trademarks of The Apache Software Foundation.
       </div>
     </div>
   </div>
   <div class="ui inverted vertical segment">
     <div class="ui one column middle aligned grid">
       <div class="center aligned column">
-        <a href="http://incubator.apache.org/">
-          <img src="/images/incubator-logo-white.jpg">
-        </a>&nbsp;
         <a href="https://www.apache.org/events/current-event.html">
           <img src="https://www.apache.org/events/current-event-234x60.png" alt="ASF Current Event">
         </a>

@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>The UserALE.js API</title>
-  <meta name="description" content="Apache UserALE.js features a robust API that allows you customize official Apache Flagon UserALE.js builds page-by-page to suite your needs.">
+  <meta name="description" content="Apache Flagon UserALE.js provides a comprehensive JavaScript and TypeScript API for runtime configuration, custom log enrichment/filtering, header injection,...">
 
   <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/assets/jquery.min.js"></script>
   <script src="/semantic/dist/semantic.min.js"></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/assets/d3.v4.min.js"></script>
   <script src="/js/main.js"></script>
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://flagon.incubator.apache.org/docs/useralejs/API/">
+  <link rel="canonical" href="https://flagon.apache.org/docs/useralejs/API/">
   <link rel="alternate" type="application/rss+xml" title="Apache Flagon" href="/feed.xml">
 
   
@@ -35,23 +35,15 @@
       <div class="ui dropdown item">
         Products
         <div class="menu">
-          <a class="item" href="/stack">Stack</a>
           <a class="item" href="/userale">UserALE</a>
           <a class="item" href="/distill">Distill</a>
-          <a class="item" href="/tap">Tap</a>
-          <a class="item" href="/stout">Stout</a>
         </div>
       </div>
       <div class="ui dropdown item">
         <a href="/docs">Docs</a>
         <div class="menu">
-          <a class="item" href="/docs/stack">Stack</a>
-          <a class="item" href="/docs/userale">UserALE</a>
           <a class="item" href="/docs/useralejs">UserALE.js</a>
-          <a class="item" href="/docs/useralepy">UserALE.py</a>
           <a class="item" href="/docs/distill">Distill</a>
-          <a class="item" href="/docs/tap">Tap</a>
-          <a class="item" href="/docs/stout">Stout</a>
         </div>
       </div>
       <a class="item" href="/releases">Releases</a>
@@ -65,11 +57,6 @@
       <div class="docs-wrapper">
   <div class="docs-sidebar">
     
-
-
-
-
-
 
 
 
@@ -90,42 +77,9 @@
       
         <a class="item" href="/docs/">About the Docs</a>
       
+        <a class="item" href="/docs/deployments/">Reference Architectures & Deployments</a>
+      
         <a class="item" href="/docs/contributing/">Contributing</a>
-      
-    </div>
-  </div>
-
-
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
-    Stack
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/stack/">Getting Started</a>
-      
-        <a class="item" href="/docs/stack/scaling/">Scaling Considerations</a>
-      
-    </div>
-  </div>
-
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
-    UserALE
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/userale/">About UserALE</a>
       
     </div>
   </div>
@@ -160,28 +114,6 @@
     <div class="title">
   
     <i class="dropdown icon"></i>
-    UserALE.py
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/useralepy/">Installation</a>
-      
-        <a class="item" href="/docs/useralepy/start.html">Getting Started</a>
-      
-        <a class="item" href="/docs/useralepy/api.html">API Documentation</a>
-      
-        <a class="item" href="/docs/useralepy/changelog.html">Changelog</a>
-      
-    </div>
-  </div>
-
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
     Distill
   </div>
   
@@ -189,220 +121,279 @@
   
     <div class="ui inverted bulleted list docs-list">
       
-        <a class="item" href="/docs/distill/">Installation</a>
+        <a class="item" href="/docs/distill/">Getting Started & API Reference</a>
       
-        <a class="item" href="/docs/distill/start.html">Getting Started</a>
+        <a class="item" href="/docs/distill/behavioral/">Frustration & Spatial Analytics</a>
       
-        <a class="item" href="/docs/distill/api.html">API Documentation</a>
+        <a class="item" href="/docs/distill/graphs/">Clickstream Graphs & Funnels</a>
       
-        <a class="item" href="/docs/distill/analytics.html">Apache Distill Analytics</a>
-      
-        <a class="item" href="/docs/distill/http.html">Apache Distill HTTP Client</a>
-      
-        <a class="item" href="/docs/distill/models.html">Apache Distill Models</a>
-      
-        <a class="item" href="/docs/distill/utilities.html">Apache Distill Utilities</a>
-      
-        <a class="item" href="/docs/distill/changelog.html">Changelog</a>
+        <a class="item" href="/docs/distill/segmentation/">Segmentation & Multi-Format Ingestion</a>
       
     </div>
   </div>
 
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
-    Tap
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/tap/">Getting Started</a>
-      
-    </div>
-  </div>
-
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
-    Stout
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/stout/">About Stout</a>
-      
-        <a class="item" href="/docs/stout/start.html">Getting Started</a>
-      
-    </div>
-  </div>
 </div>
 
   </div>
   <div class="docs-content">
     <h2 class="ui header">The UserALE.js API</h2>
-    <p><a href="https://github.com/apache/incubator-flagon-useralejs">Apache UserALE.js</a> features a robust API that allows you 
-customize official Apache Flagon UserALE.js <a href="https://github.com/apache/incubator-flagon-useralejs/tree/master/build">builds</a> page-by-page to suite your needs.</p>
+    <p><a href="https://github.com/apache/flagon/tree/master/products/userale/packages/flagon-userale">Apache Flagon UserALE.js</a> provides a comprehensive JavaScript and TypeScript API for runtime configuration, custom log enrichment/filtering, header injection, and pluggable wire exporters.</p>
 
-<p>The API exposes a number of functions, including: <code class="highlighter-rouge">options</code>, <code class="highlighter-rouge">setLogFilter</code>, &amp; <code class="highlighter-rouge">setLogMapper</code>. With these two powerful functions, you have a lot of 
-latitude in customizing and curating your logs.</p>
+<hr />
 
-<h1 id="api-usage">API Usage</h1>
+<h2 id="core-lifecycle--configuration-api">Core Lifecycle &amp; Configuration API</h2>
 
-<p>To invoke the API, simply add additional javascript code blocks under your UserALE.js script tag.</p>
+<h3 id="optionsnewconfig-partialsettingsconfig-settingsconfig"><code class="language-plaintext highlighter-rouge">options(newConfig?: Partial&lt;Settings.Config&gt;): Settings.Config</code></h3>
 
-<p>Don’t forget to add the UserALE.js script tag! For an in depth example, see our <a href="/docs/useralejs">Getting Started Guide</a>) and our <a href="https://github.com/apache/incubator-flagon-useralejs/tree/master/example">example test utility</a>.</p>
+<p>Reads or shallow-merges runtime configuration options. Calling <code class="language-plaintext highlighter-rouge">options()</code> with no arguments returns the current configuration object.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
-  <span class="nt">&lt;title&gt;</span>UserAleJS - Example Page<span class="nt">&lt;/title&gt;</span>
- <span class="c">&lt;!--
- Add the UserALE.js script tag to the top of your doc
- --&gt;</span>
-   <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/path/to/userale-2.1.1.min.js"</span> <span class="na">data-url=</span><span class="s">"http://yourLoggingUrl"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">userale</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">flagon-userale</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">userale</span><span class="p">.</span><span class="nx">options</span><span class="p">({</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://collector.example.com/v1/logs</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">userId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">user-42</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">toolName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">checkout-ui</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">toolVersion</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2.5.0</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">exporterFormat</span><span class="p">:</span> <span class="dl">'</span><span class="s1">otlp-json</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">});</span>
 </code></pre></div></div>
 
-<h2 id="options-examples"><code class="highlighter-rouge">options</code> Examples</h2>
+<h3 id="start-void--stop-void"><code class="language-plaintext highlighter-rouge">start(): void</code> &amp; <code class="language-plaintext highlighter-rouge">stop(): void</code></h3>
 
-<p><code class="highlighter-rouge">options</code> allows you to modify UserALE.js script tag parameters. This can be particularly useful if need to pass additional data about users from your page into the logging parameters, like username and sessionID. You can build variables constructors that pass data from form data or browser storage to UserALE’s paramters.</p>
+<p>Starts or halts event capturing and log transmission. Particularly useful when <code class="language-plaintext highlighter-rouge">autostart: false</code> (<code class="language-plaintext highlighter-rouge">data-autostart="false"</code>) is configured until user consent or authentication completes.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--
-Try out the options API to pass dynamic page data into your UserALE.js params page by page.
---&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-    <span class="kd">const</span> <span class="nx">changeMe</span> <span class="o">=</span> <span class="s2">"me"</span><span class="p">;</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">userale</span><span class="p">.</span><span class="nx">options</span><span class="p">({</span>
-      <span class="s2">"userId"</span><span class="p">:</span> <span class="nx">changeMe</span><span class="p">,</span>
-      <span class="s2">"version"</span><span class="p">:</span> <span class="s2">"2.1.1"</span><span class="p">,</span>
-      <span class="s2">"sessionID"</span><span class="p">:</span> <span class="s2">"4"</span>
-    <span class="p">})</span>
-<span class="nt">&lt;/script&gt;</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">userale</span><span class="p">.</span><span class="nx">options</span><span class="p">({</span> <span class="na">autostart</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+<span class="c1">// Later, after user consent:</span>
+<span class="nx">userale</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
 </code></pre></div></div>
 
-<h2 id="setlogfilter-examples"><code class="highlighter-rouge">setLogFilter</code> Examples</h2>
+<h3 id="version-string"><code class="language-plaintext highlighter-rouge">version: string</code></h3>
 
-<p><code class="highlighter-rouge">setLogFilter</code> allows you to eliminate log data you don’t need or want from your log stream:</p>
+<p>Exports the current <code class="language-plaintext highlighter-rouge">flagon-userale</code> package version string.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--
-Add additional code blocks to set the filters you want
-This simple array filter pulls mouseover data out of your log stream
---&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">userale</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">log</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">(</span><span class="nx">log</span><span class="p">.</span><span class="nx">type</span> <span class="o">!=</span> <span class="s1">'mouseover'</span><span class="p">);</span>
-    <span class="p">});</span>
-  <span class="nt">&lt;/script&gt;</span>
+<hr />
+
+<h2 id="custom-logging--filtering-callbacks">Custom Logging &amp; Filtering Callbacks</h2>
+
+<h3 id="addcallbackscallbacks-recordstring-callablefunction-boolean"><code class="language-plaintext highlighter-rouge">addCallbacks(callbacks: Record&lt;string, CallableFunction&gt;): boolean</code></h3>
+
+<p>Registers one or more named callback functions executed sequentially on every packaged log (<code class="language-plaintext highlighter-rouge">(log, event) =&gt; log | false</code>). Returning <code class="language-plaintext highlighter-rouge">false</code> (or any falsy value) drops the log from the queue; returning a modified log object replaces it.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">userale</span><span class="p">.</span><span class="nx">addCallbacks</span><span class="p">({</span>
+  <span class="nx">dropIntervalLogs</span><span class="p">(</span><span class="nx">log</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">log</span><span class="p">.</span><span class="nx">logType</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">interval</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">log</span><span class="p">;</span>
+  <span class="p">},</span>
+  <span class="nx">attachExperimentTag</span><span class="p">(</span><span class="nx">log</span><span class="p">,</span> <span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="p">...</span><span class="nx">log</span><span class="p">,</span>
+      <span class="na">experimentVariant</span><span class="p">:</span> <span class="dl">'</span><span class="s1">checkout-v2</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">};</span>
+  <span class="p">},</span>
+<span class="p">});</span>
 </code></pre></div></div>
 
-<p>Here is one UserALE.js filter to rule them all!</p>
+<h3 id="removecallbackstargetkeys-string-void"><code class="language-plaintext highlighter-rouge">removeCallbacks(targetKeys: string[]): void</code></h3>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- 
-Modify the array page-by-page to curate your log stream:
-by adding unwanted event 'types' in type_array;
-by adding unwanted log classes to eliminate 'raw' or 'interval' logs from your stream.
---&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-    <span class="kd">var</span> <span class="nx">type_array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'mouseup'</span><span class="p">,</span> <span class="s1">'mouseover'</span><span class="p">,</span> <span class="s1">'dblclick'</span><span class="p">,</span> <span class="s1">'blur'</span><span class="p">,</span> <span class="s1">'focus'</span><span class="p">]</span>
-    <span class="kd">var</span> <span class="nx">logType_array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'interval'</span><span class="p">]</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">userale</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">log</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="o">!</span><span class="nx">type_array</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">log</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">logType_array</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">log</span><span class="p">.</span><span class="nx">logType</span><span class="p">);</span>
-    <span class="p">});</span>
-  <span class="nt">&lt;/script&gt;</span>
+<p>Removes registered callbacks by name:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">userale</span><span class="p">.</span><span class="nx">removeCallbacks</span><span class="p">([</span><span class="dl">'</span><span class="s1">dropIntervalLogs</span><span class="dl">'</span><span class="p">]);</span>
 </code></pre></div></div>
 
-<p>You can also use the <code class="highlighter-rouge">setLogFilter</code> function to do other cool stuff. Below is an example for how to further modify the 
-rate at which UserALE.js collects data, but dropping every other log (odd-even) in the logging queue.</p>
+<h3 id="logcustomlog-loggingcustomlog-boolean"><code class="language-plaintext highlighter-rouge">log(customLog: Logging.CustomLog): boolean</code></h3>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-      <span class="kd">var</span> <span class="nx">logCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="nb">window</span><span class="p">.</span><span class="nx">userale</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">log</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span><span class="nx">logCounter</span><span class="o">++</span> <span class="o">%</span> <span class="mi">2</span><span class="p">);</span>
-      <span class="p">});</span>
-    <span class="nt">&lt;/script&gt;</span>
+<p>Appends a custom log object directly onto the UserALE queue:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">userale</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span>
+  <span class="na">target</span><span class="p">:</span> <span class="dl">'</span><span class="s1">checkout-funnel</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">step_complete</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">logType</span><span class="p">:</span> <span class="dl">'</span><span class="s1">custom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">userAction</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">details</span><span class="p">:</span> <span class="p">{</span> <span class="na">step</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">cartTotal</span><span class="p">:</span> <span class="mf">149.0</span> <span class="p">},</span>
+<span class="p">});</span>
 </code></pre></div></div>
 
-<h2 id="setlogmapper-examples"><code class="highlighter-rouge">setLogMapper</code> Examples</h2>
+<h3 id="packageloge-event-detailfcn-loggingdynamicdetailfunction-boolean--packagecustomlogcustomlogs-loggingcustomlog-detailfcn-loggingdynamicdetailfunction-useraction-boolean-boolean"><code class="language-plaintext highlighter-rouge">packageLog(e: Event, detailFcn?: Logging.DynamicDetailFunction): boolean</code> &amp; <code class="language-plaintext highlighter-rouge">packageCustomLog(customLogs: Logging.CustomLog, detailFcn: Logging.DynamicDetailFunction, userAction: boolean): boolean</code></h3>
 
-<p><code class="highlighter-rouge">setLogMapper</code> allows you to modify or add new fields to UserALE.js logs.</p>
+<p>Packages a standard DOM <code class="language-plaintext highlighter-rouge">Event</code> or custom metadata object with full UserALE page/session/browser context and enqueues it.</p>
 
-<p>This simple mapping function adds a new log field for custom labels you want to attach to certain elements:</p>
+<h3 id="detailsconfig-configuration-type-eventsallowedevents-e-event--recordstring-unknown--null"><code class="language-plaintext highlighter-rouge">details(config: Configuration, type: Events.AllowedEvents): ((e: Event) =&gt; Record&lt;string, unknown&gt;) | null</code></h3>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--
-This will add your label to all event logs that reference a particular DOM target.
---&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-      <span class="nb">window</span><span class="p">.</span><span class="nx">userale</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">log</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">targetsForLabels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"button#test_button"</span><span class="p">];</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">targetsForLabels</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">log</span><span class="p">.</span><span class="nx">target</span><span class="p">))</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="nx">log</span><span class="p">,</span> <span class="p">{</span> <span class="na">CustomLabel</span><span class="p">:</span> <span class="s2">"Click me!"</span> <span class="p">});</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nx">log</span><span class="p">;</span>  
-        <span class="p">}</span> 
-      <span class="p">});</span>
-    <span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
+<p>Returns the default detail-extractor function for a given DOM event type (<code class="language-plaintext highlighter-rouge">click</code>, <code class="language-plaintext highlighter-rouge">keydown</code>, <code class="language-plaintext highlighter-rouge">input</code>, <code class="language-plaintext highlighter-rouge">change</code>, <code class="language-plaintext highlighter-rouge">wheel</code>, etc.). Note that <code class="language-plaintext highlighter-rouge">&lt;input type="password"&gt;</code> values are automatically masked (<code class="language-plaintext highlighter-rouge">"********"</code>).</p>
 
-<p>This cool mapping function adds a progressive count on a given element (“app”) and writes to a new log field 
-called “score”</p>
+<h3 id="getselectorele-eventtarget-string--buildpathe-event-string"><code class="language-plaintext highlighter-rouge">getSelector(ele: EventTarget): string</code> &amp; <code class="language-plaintext highlighter-rouge">buildPath(e: Event): string[]</code></h3>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"increment"</span><span class="nt">&gt;</span>+<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"decrement"</span><span class="nt">&gt;</span>-<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"scoreboard"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/script&gt;</span> 
+<p>Utility helpers that compute a CSS-like element selector (<code class="language-plaintext highlighter-rouge">tag#id.class</code>) and full DOM ancestry path array from a DOM <code class="language-plaintext highlighter-rouge">Event</code>.</p>
 
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-      <span class="kd">var</span> <span class="nx">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="kd">var</span> <span class="nx">scoreBoard</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'scoreboard'</span><span class="p">);</span>
-      <span class="nx">scoreBoard</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s1">'0'</span><span class="p">;</span>
+<h3 id="gettargetrectel-eventtarget--null-targetrect--null--detectbrowser--browser-string-version-string-"><code class="language-plaintext highlighter-rouge">getTargetRect(el: EventTarget | null): TargetRect | null</code> &amp; <code class="language-plaintext highlighter-rouge">detectBrowser(): { browser: string; version: string }</code></h3>
 
-      <span class="kd">function</span> <span class="nx">setScore</span><span class="p">(</span><span class="nx">nextScore</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">score</span> <span class="o">=</span> <span class="nx">nextScore</span><span class="p">;</span>
-        <span class="nx">scoreBoard</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span>
-      <span class="p">}</span>
-
-      <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'increment'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">setScore</span><span class="p">(</span><span class="nx">score</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-      <span class="p">});</span>
-
-      <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'decrement'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">score</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">setScore</span><span class="p">(</span><span class="nx">score</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
-        <span class="p">}</span>
-      <span class="p">});</span>
-
-      <span class="nb">window</span><span class="p">.</span><span class="nx">userale</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">log</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="nx">log</span><span class="p">,</span> <span class="p">{</span> <span class="na">score</span><span class="p">:</span> <span class="nx">score</span> <span class="p">});</span> <span class="c1">// Add the "score" property to the log</span>
-      <span class="p">});</span>
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-
-</code></pre></div></div>
-
-<p>Test these examples out in our UserALE.js <a href="https://github.com/apache/incubator-flagon-useralejs/blob/master/example/index.html">example page</a> test utility!</p>
-
-<h3 id="benefits-of-the-useralejs-api">Benefits of the UserALE.js API</h3>
 <ul>
-  <li>No need to dig into our source code</li>
-  <li>Version control is easy and no need to sweat merges–just download the latest <a href="/releases">release</a>, 
- or update via <a href="https://www.npmjs.com/package/flagon-userale">npm</a>.</li>
-  <li>Manage logs page-by-page, ideal for large or complex sites</li>
-  <li>Use basic or best-practice JS styles and methods to build your own filters, no need to learn weird custom syntax.</li>
+  <li><code class="language-plaintext highlighter-rouge">getTargetRect</code> extracts a rounded bounding box (<code class="language-plaintext highlighter-rouge">{ x, y, width, height, top, right, bottom, left }</code>) for a DOM element (attached automatically as <code class="language-plaintext highlighter-rouge">targetRect</code> on <code class="language-plaintext highlighter-rouge">click</code>, <code class="language-plaintext highlighter-rouge">dblclick</code>, <code class="language-plaintext highlighter-rouge">change</code>, and <code class="language-plaintext highlighter-rouge">submit</code> events).</li>
+  <li><code class="language-plaintext highlighter-rouge">detectBrowser</code> detects the browser name and version using <code class="language-plaintext highlighter-rouge">navigator.userAgentData</code> (User-Agent Client Hints) with a regex fallback and zero external dependencies.</li>
 </ul>
+
+<hr />
+
+<h2 id="authentication--custom-http-headers">Authentication &amp; Custom HTTP Headers</h2>
+
+<p>All HTTP-based exporters (<code class="language-plaintext highlighter-rouge">HttpJsonExporter</code>, <code class="language-plaintext highlighter-rouge">ProtoJsonExporter</code>, <code class="language-plaintext highlighter-rouge">OtlpJsonExporter</code>) construct headers through <code class="language-plaintext highlighter-rouge">buildHeaders(config)</code>, applying them to both interval <code class="language-plaintext highlighter-rouge">fetch()</code> requests and <code class="language-plaintext highlighter-rouge">pagehide</code> (<code class="language-plaintext highlighter-rouge">fetch(..., { keepalive: true })</code>) flushes.</p>
+
+<h3 id="registerauthcallbackcallback---string-boolean--resetauthcallback-void"><code class="language-plaintext highlighter-rouge">registerAuthCallback(callback: () =&gt; string): boolean</code> &amp; <code class="language-plaintext highlighter-rouge">resetAuthCallback(): void</code></h3>
+
+<p>Registers (or resets) a dynamic provider returning the <code class="language-plaintext highlighter-rouge">Authorization</code> header value on each batch export:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">userale</span><span class="p">.</span><span class="nx">registerAuthCallback</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="s2">`Bearer </span><span class="p">${</span><span class="nx">getCurrentJwtToken</span><span class="p">()}</span><span class="s2">`</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="registerheaderscallbackcallback---recordstring-string-boolean--resetheaderscallback-void"><code class="language-plaintext highlighter-rouge">registerHeadersCallback(callback: () =&gt; Record&lt;string, string&gt;): boolean</code> &amp; <code class="language-plaintext highlighter-rouge">resetHeadersCallback(): void</code></h3>
+
+<p>Registers (or resets) a dynamic provider returning arbitrary HTTP headers on each batch export:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">userale</span><span class="p">.</span><span class="nx">registerHeadersCallback</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="dl">'</span><span class="s1">x-tenant-id</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">acme-corp</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">x-request-source</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">userale-web</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">}));</span>
+</code></pre></div></div>
+
+<p>Static headers can also be configured via <code class="language-plaintext highlighter-rouge">userale.options({ authHeader: 'Bearer ...', apiKey: '...', headers: { ... } })</code>.</p>
+
+<hr />
+
+<h2 id="pluggable-wire-exporters-logexporter">Pluggable Wire Exporters (<code class="language-plaintext highlighter-rouge">LogExporter</code>)</h2>
+
+<p>UserALE decouples in-memory event packaging from wire serialization and transport via the <code class="language-plaintext highlighter-rouge">LogExporter</code> interface:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kr">interface</span> <span class="nx">LogExporter</span> <span class="p">{</span>
+  <span class="k">export</span><span class="p">(</span><span class="nx">logs</span><span class="p">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">Logging</span><span class="p">.</span><span class="nx">Log</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">options</span><span class="p">?:</span> <span class="nx">ExportOptions</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ExportResult</span><span class="o">&gt;</span><span class="p">;</span>
+  <span class="nx">flush</span><span class="p">?():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
+  <span class="nx">shutdown</span><span class="p">?():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="built-in-exporters--helpers">Built-In Exporters &amp; Helpers</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Exported Symbol</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">registerExporter(exporter: LogExporter)</code></td>
+      <td>Registers a custom <code class="language-plaintext highlighter-rouge">LogExporter</code> instance and switches the active sender to use it immediately.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">createExporter(config)</code></td>
+      <td>Factory returning the active <code class="language-plaintext highlighter-rouge">LogExporter</code> for a <code class="language-plaintext highlighter-rouge">Configuration</code> instance.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HttpJsonExporter</code></td>
+      <td>Default exporter sending flat UserALE JSON arrays over <code class="language-plaintext highlighter-rouge">fetch</code> (with 48 KiB chunked <code class="language-plaintext highlighter-rouge">keepalive: true</code> on <code class="language-plaintext highlighter-rouge">pagehide</code>).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">WebSocketExporter</code></td>
+      <td>Streams log batches over a persistent <code class="language-plaintext highlighter-rouge">WebSocket</code> (<code class="language-plaintext highlighter-rouge">ws://</code> / <code class="language-plaintext highlighter-rouge">wss://</code>).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ProtoJsonExporter</code> / <code class="language-plaintext highlighter-rouge">toProtoLogBatch(logs)</code> / <code class="language-plaintext highlighter-rouge">toProtoUserALELog(log)</code></td>
+      <td>Serializes logs into canonical Protobuf v1 JSON (<code class="language-plaintext highlighter-rouge">apache.flagon.userale.v1.LogBatch</code>) matching <code class="language-plaintext highlighter-rouge">proto/apache/flagon/userale/v1/log.proto</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">OtlpJsonExporter</code> / <code class="language-plaintext highlighter-rouge">toOtlpExportLogsServiceRequest(logs, config)</code></td>
+      <td>Serializes logs into OpenTelemetry <code class="language-plaintext highlighter-rouge">ExportLogsServiceRequest</code> JSON with <code class="language-plaintext highlighter-rouge">Resource</code> hoisting, <code class="language-plaintext highlighter-rouge">BigInt</code> nanosecond timestamps, <code class="language-plaintext highlighter-rouge">eventName</code>, structured <code class="language-plaintext highlighter-rouge">kvlistValue</code> body, and W3C <code class="language-plaintext highlighter-rouge">traceId</code>/<code class="language-plaintext highlighter-rouge">spanId</code> correlation.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">OtelSdkExporter</code></td>
+      <td>Bridges UserALE logs directly into an existing OpenTelemetry JS <code class="language-plaintext highlighter-rouge">@opentelemetry/api-logs</code> <code class="language-plaintext highlighter-rouge">Logger</code> via <code class="language-plaintext highlighter-rouge">logger.emit(...)</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">resolveOtlpLogsEndpoint(endpoint)</code></td>
+      <td>Normalizes an OTLP base URL by appending <code class="language-plaintext highlighter-rouge">/v1/logs</code> when the URL path is empty or <code class="language-plaintext highlighter-rouge">/</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">toUnixNanoString(clientTimeMs, microTime)</code></td>
+      <td>Converts millisecond + sub-millisecond timestamps to a 64-bit nanosecond string using <code class="language-plaintext highlighter-rouge">BigInt</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example-correlating-userale-events-with-w3c-distributed-traces">Example: Correlating UserALE Events with W3C Distributed Traces</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">userale</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">flagon-userale</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">userale</span><span class="p">.</span><span class="nx">options</span><span class="p">({</span>
+  <span class="na">exporterType</span><span class="p">:</span> <span class="dl">'</span><span class="s1">otlp</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">otlpEndpoint</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http://localhost:4318/v1/logs</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">toolName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">storefront-web</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">traceContext</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">({</span>
+    <span class="na">traceId</span><span class="p">:</span> <span class="nx">currentActiveSpan</span><span class="p">.</span><span class="nx">traceId</span><span class="p">,</span> <span class="c1">// 32-hex W3C trace-id</span>
+    <span class="na">spanId</span><span class="p">:</span> <span class="nx">currentActiveSpan</span><span class="p">.</span><span class="nx">spanId</span><span class="p">,</span>   <span class="c1">// 16-hex W3C span-id</span>
+  <span class="p">}),</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="two-layer-session-replay--behavioral-dom-telemetry-104">Two-Layer Session Replay &amp; Behavioral DOM Telemetry (<code class="language-plaintext highlighter-rouge">#104</code>)</h2>
+
+<p>UserALE provides a two-layer session replay architecture that keeps the core bundle dependency-free while supporting both structural DOM telemetry and <code class="language-plaintext highlighter-rouge">rrweb</code>-compatible visual playback:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Exported Symbol</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">startSessionReplay(options?: SessionReplayOptions, config?: Configuration): () =&gt; void</code></td>
+      <td>Starts Layer 1 (<code class="language-plaintext highlighter-rouge">MutationObserver</code> + <code class="language-plaintext highlighter-rouge">RageClickDetector</code>) and optional Layer 2 (<code class="language-plaintext highlighter-rouge">rrweb</code> ring-buffer recorder). Returns a stop/cleanup function.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">flushSessionReplay(trigger?: string): Promise&lt;ReplayEnvelope \| null&gt;</code></td>
+      <td>Immediately flushes the rolling <code class="language-plaintext highlighter-rouge">rrweb</code> ring buffer as a <code class="language-plaintext highlighter-rouge">logType: 'replay', type: 'session_replay'</code> envelope tagged with <code class="language-plaintext highlighter-rouge">sessionId</code> and active OpenTelemetry <code class="language-plaintext highlighter-rouge">traceId</code> / <code class="language-plaintext highlighter-rouge">spanId</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">stopSessionReplay(): void</code></td>
+      <td>Stops active <code class="language-plaintext highlighter-rouge">MutationObserver</code> and <code class="language-plaintext highlighter-rouge">rrweb</code> recording and clears the ring buffer.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">getActiveReplayRingBuffer(): ReplayRingBuffer \| null</code></td>
+      <td>Returns the active <code class="language-plaintext highlighter-rouge">ReplayRingBuffer</code> instance when session replay is running.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ReplayRingBuffer</code></td>
+      <td>Rolling in-memory ring buffer (<code class="language-plaintext highlighter-rouge">maxDurationMs</code>, <code class="language-plaintext highlighter-rouge">maxFrames</code>) that preserves <code class="language-plaintext highlighter-rouge">rrweb</code> <code class="language-plaintext highlighter-rouge">Meta</code> (<code class="language-plaintext highlighter-rouge">type: 4</code>) and latest <code class="language-plaintext highlighter-rouge">FullSnapshot</code> (<code class="language-plaintext highlighter-rouge">type: 2</code>) anchor frames.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">RageClickDetector</code></td>
+      <td>Sliding-window detector that triggers when <code class="language-plaintext highlighter-rouge">threshold</code> (default <code class="language-plaintext highlighter-rouge">3</code>) clicks occur on the same target selector within <code class="language-plaintext highlighter-rouge">windowMs</code> (<code class="language-plaintext highlighter-rouge">1000ms</code>) and <code class="language-plaintext highlighter-rouge">maxRadiusPx</code> (<code class="language-plaintext highlighter-rouge">30px</code>).</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">userale</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">flagon-userale</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">rrweb</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">rrweb</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">userale</span><span class="p">.</span><span class="nx">startSessionReplay</span><span class="p">({</span>
+  <span class="na">recorder</span><span class="p">:</span> <span class="nx">rrweb</span><span class="p">.</span><span class="nx">record</span><span class="p">,</span>
+  <span class="na">maxDurationMs</span><span class="p">:</span> <span class="mi">30</span><span class="nx">_000</span><span class="p">,</span>
+  <span class="na">observeMutations</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">detectRageClicks</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">flushOnError</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<hr />
 
 <h2 id="contributing">Contributing</h2>
 
-<p>Contributions are welcome!  Simply <a href="https://issues.apache.org/jira/browse/FLAGON">submit an issue report</a> for problems 
-you encounter or a pull request for your feature or bug fix.  The core team will review it and work with you to 
-incorporate it into UserALE.js.</p>
+<p>Contributions are welcome! See our <a href="/docs/contributing">Contributing Guide</a> or open an issue on <a href="https://github.com/apache/flagon/issues">GitHub</a>.</p>
 
   </div>
 </div>
@@ -415,64 +406,49 @@ incorporate it into UserALE.js.</p>
       <div class="column">
         <h4 class="ui inverted header">About</h4>
         <div class="ui inverted link list">
-          <a class="item" href="/stack">Stack</a>
           <a class="item" href="/userale">UserALE</a>
           <a class="item" href="/distill">Distill</a>
-          <a class="item" href="/tap">Tap</a>
-          <a class="item" href="/stout">Stout</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Docs</h4>
         <div class="ui inverted link list">
-          <a class="item" href="/docs/stack">Stack</a>
-          <a class="item" href="/docs/userale">UserALE</a>
-          <a class="item" href="/docs/useralejs">UserAle.js</a>
-          <a class="item" href="/docs/useralepy">UserAle.py</a>
+          <a class="item" href="/docs/useralejs">UserALE.js</a>
           <a class="item" href="/docs/distill">Distill</a>
-          <a class="item" href="/docs/tap">Tap</a>
-          <a class="item" href="/docs/stout">Stout</a>
+          <a class="item" href="/docs/deployments">Reference Deployments</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Community</h4>
         <div class="ui inverted link list">
-          <a class="item" href="https://github.com/apache?q=flagon">GitHub</a>
-          <a class="item" href="http://stackoverflow.com/questions/tagged/apache-flagon">StackOverflow</a>
-          <a class="item" href="https://issues.apache.org/jira/browse/FLAGON">Jira Issue Tracker</a>
-          <a class="item" href="https://cwiki.apache.org/confluence/display/FLAGON">Project Wiki</a>
-          <a class="item" href="https://twitter.com/ApacheFlagon">Twitter</a>
+          <a class="item" href="https://github.com/apache/flagon">GitHub</a>
+          <a class="item" href="https://stackoverflow.com/questions/tagged/apache-flagon">StackOverflow</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Apache</h4>
         <div class="ui inverted link list">
-          <a class="item" href="http://www.apache.org/">Apache Software Foundation</a>
-          <a class="item" href="http://www.apache.org/licenses/">License</a>
-          <a class="item" href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
-          <a class="item" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
-          <a class="item" href="http://www.apache.org/security/">Security</a>
+          <a class="item" href="https://www.apache.org/">Apache Software Foundation</a>
+          <a class="item" href="https://www.apache.org/licenses/">License</a>
+          <a class="item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+          <a class="item" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+          <a class="item" href="https://www.apache.org/security/">Security</a>
+          <a class="item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
         </div>
       </div>
     </div>
   </div>
   <div class="ui inverted vertical segment">
     <div class="ui two column middle aligned grid">
-      <div class="column">
-        Apache Flagon is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
-      </div>
       <div class="center aligned column">
-        Copyright &copy; 2021 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
-        Apache Flagon, Flagon, Apache, the Apache feather logo, the Apache Flagon logo and the Apache Incubator logo are trademarks of The Apache Software Foundation.
+        Copyright &copy; 2026 The Apache Software Foundation, Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+        Apache Flagon, Flagon, Apache, the Apache feather logo, and the Apache Flagon logo are trademarks of The Apache Software Foundation.
       </div>
     </div>
   </div>
   <div class="ui inverted vertical segment">
     <div class="ui one column middle aligned grid">
       <div class="center aligned column">
-        <a href="http://incubator.apache.org/">
-          <img src="/images/incubator-logo-white.jpg">
-        </a>&nbsp;
         <a href="https://www.apache.org/events/current-event.html">
           <img src="https://www.apache.org/events/current-event-234x60.png" alt="ASF Current Event">
         </a>

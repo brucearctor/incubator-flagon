@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>UserALE.js&#39; Data Schema</title>
-  <meta name="description" content="This guide describes the structure of content of Apache UserALE.js logs, including: which behaviors UserALE.js listens to; which meta data UserALE.js attache...">
+  <meta name="description" content="This guide describes the structure of Apache Flagon UserALE.js logs, including: The in-memory and default flat JSON schema (&#39;http-json&#39;) The OpenTelemetry OT...">
 
   <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/assets/jquery.min.js"></script>
   <script src="/semantic/dist/semantic.min.js"></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/assets/d3.v4.min.js"></script>
   <script src="/js/main.js"></script>
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://flagon.incubator.apache.org/docs/useralejs/dataschema/">
+  <link rel="canonical" href="https://flagon.apache.org/docs/useralejs/dataschema/">
   <link rel="alternate" type="application/rss+xml" title="Apache Flagon" href="/feed.xml">
 
   
@@ -35,23 +35,15 @@
       <div class="ui dropdown item">
         Products
         <div class="menu">
-          <a class="item" href="/stack">Stack</a>
           <a class="item" href="/userale">UserALE</a>
           <a class="item" href="/distill">Distill</a>
-          <a class="item" href="/tap">Tap</a>
-          <a class="item" href="/stout">Stout</a>
         </div>
       </div>
       <div class="ui dropdown item">
         <a href="/docs">Docs</a>
         <div class="menu">
-          <a class="item" href="/docs/stack">Stack</a>
-          <a class="item" href="/docs/userale">UserALE</a>
           <a class="item" href="/docs/useralejs">UserALE.js</a>
-          <a class="item" href="/docs/useralepy">UserALE.py</a>
           <a class="item" href="/docs/distill">Distill</a>
-          <a class="item" href="/docs/tap">Tap</a>
-          <a class="item" href="/docs/stout">Stout</a>
         </div>
       </div>
       <a class="item" href="/releases">Releases</a>
@@ -65,11 +57,6 @@
       <div class="docs-wrapper">
   <div class="docs-sidebar">
     
-
-
-
-
-
 
 
 
@@ -90,42 +77,9 @@
       
         <a class="item" href="/docs/">About the Docs</a>
       
+        <a class="item" href="/docs/deployments/">Reference Architectures & Deployments</a>
+      
         <a class="item" href="/docs/contributing/">Contributing</a>
-      
-    </div>
-  </div>
-
-
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
-    Stack
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/stack/">Getting Started</a>
-      
-        <a class="item" href="/docs/stack/scaling/">Scaling Considerations</a>
-      
-    </div>
-  </div>
-
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
-    UserALE
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/userale/">About UserALE</a>
       
     </div>
   </div>
@@ -160,28 +114,6 @@
     <div class="title">
   
     <i class="dropdown icon"></i>
-    UserALE.py
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/useralepy/">Installation</a>
-      
-        <a class="item" href="/docs/useralepy/start.html">Getting Started</a>
-      
-        <a class="item" href="/docs/useralepy/api.html">API Documentation</a>
-      
-        <a class="item" href="/docs/useralepy/changelog.html">Changelog</a>
-      
-    </div>
-  </div>
-
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
     Distill
   </div>
   
@@ -189,327 +121,157 @@
   
     <div class="ui inverted bulleted list docs-list">
       
-        <a class="item" href="/docs/distill/">Installation</a>
+        <a class="item" href="/docs/distill/">Getting Started & API Reference</a>
       
-        <a class="item" href="/docs/distill/start.html">Getting Started</a>
+        <a class="item" href="/docs/distill/behavioral/">Frustration & Spatial Analytics</a>
       
-        <a class="item" href="/docs/distill/api.html">API Documentation</a>
+        <a class="item" href="/docs/distill/graphs/">Clickstream Graphs & Funnels</a>
       
-        <a class="item" href="/docs/distill/analytics.html">Apache Distill Analytics</a>
-      
-        <a class="item" href="/docs/distill/http.html">Apache Distill HTTP Client</a>
-      
-        <a class="item" href="/docs/distill/models.html">Apache Distill Models</a>
-      
-        <a class="item" href="/docs/distill/utilities.html">Apache Distill Utilities</a>
-      
-        <a class="item" href="/docs/distill/changelog.html">Changelog</a>
+        <a class="item" href="/docs/distill/segmentation/">Segmentation & Multi-Format Ingestion</a>
       
     </div>
   </div>
 
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
-    Tap
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/tap/">Getting Started</a>
-      
-    </div>
-  </div>
-
-  
-    <div class="title">
-  
-    <i class="dropdown icon"></i>
-    Stout
-  </div>
-  
-    <div class="content">
-  
-    <div class="ui inverted bulleted list docs-list">
-      
-        <a class="item" href="/docs/stout/">About Stout</a>
-      
-        <a class="item" href="/docs/stout/start.html">Getting Started</a>
-      
-    </div>
-  </div>
 </div>
 
   </div>
   <div class="docs-content">
     <h2 class="ui header">UserALE.js' Data Schema</h2>
-    <p>This guide describes the structure of content of <a href="https://github.com/apache/incubator-flagon-useralejs">Apache UserALE.js</a> 
-logs, including:</p>
+    <p>This guide describes the structure of <a href="https://github.com/apache/flagon/tree/master/products/userale/packages/flagon-userale">Apache Flagon UserALE.js</a> logs, including:</p>
 <ul>
-  <li>which behaviors UserALE.js listens to;</li>
-  <li>which meta data UserALE.js attaches to logs, for context:</li>
-  <li>different types of UserALE.js logs, and their usage.</li>
+  <li>The in-memory and default flat JSON schema (<code class="language-plaintext highlighter-rouge">'http-json'</code>)</li>
+  <li>The OpenTelemetry OTLP/JSON export schema (<code class="language-plaintext highlighter-rouge">'otlp'</code> / <code class="language-plaintext highlighter-rouge">'otlp-json'</code>)</li>
+  <li>The Protobuf v1 canonical JSON export schema (<code class="language-plaintext highlighter-rouge">'proto-json'</code>, <a href="https://github.com/apache/flagon/blob/master/proto/apache/flagon/userale/v1/log.proto"><code class="language-plaintext highlighter-rouge">proto/apache/flagon/userale/v1/log.proto</code></a>)</li>
 </ul>
 
-<h2 id="useralejs-logs">UserALE.js Logs</h2>
+<p>All three formats are natively supported by <strong>Apache Flagon Distill</strong> (<code class="language-plaintext highlighter-rouge">distill.schemas.userale.extract_logs</code> and <code class="language-plaintext highlighter-rouge">UserAleSchema</code>).</p>
 
-<p>UserALE.js logs, by default, contain a lot more data than other business analytics products because it is powerful enough for <em>workflow analysis</em>.</p>
+<hr />
 
-<p>Workflow analysis is about understanding the complex interdependency between elements and behaviors within and across 
-pages. Workflow analysis at this level is really crucial for understanding:</p>
+<h2 id="1-standard-userale-flat-json-schema-exportertype-http-json">1. Standard UserALE Flat JSON Schema (<code class="language-plaintext highlighter-rouge">exporterType: 'http-json'</code>)</h2>
+
+<p>By default, UserALE.js packages each interaction as a flat JSON object so <code class="language-plaintext highlighter-rouge">userale.addCallbacks(...)</code> filters and mappers can inspect or transform fields with zero nesting overhead.</p>
+
+<h3 id="raw-interaction-log-logtype-raw">Raw Interaction Log (<code class="language-plaintext highlighter-rouge">logType: 'raw'</code>)</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"button#test_button"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"button#test_button"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"div.container"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"body"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"html"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"#document"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Window"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"pageUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8000/"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pageTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UserALE - Example Page"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pageReferrer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"browser"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"browser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"firefox"</span><span class="p">,</span><span class="w"> </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"131.0.0"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"userAgent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/131.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"clientTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1729658103797</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"microTime"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.42</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">66</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">220</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"scrnRes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w"> </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">915</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"targetRect"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="nl">"top"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="nl">"right"</span><span class="p">:</span><span class="w"> </span><span class="mi">140</span><span class="p">,</span><span class="w"> </span><span class="nl">"bottom"</span><span class="p">:</span><span class="w"> </span><span class="mi">236</span><span class="p">,</span><span class="w"> </span><span class="nl">"left"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"click"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"logType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"raw"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"userAction"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"clicks"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">"ctrl"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nl">"shift"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"me"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"toolVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.5.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"toolName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apache UserALE Example"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"useraleVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.4.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sessionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"session_1729657762020"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"httpSessionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"057109eed2c0b107476731f201b6d63d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"browserSessionId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_button"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"style"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="interval-summary-log-logtype-interval">Interval Summary Log (<code class="language-plaintext highlighter-rouge">logType: 'interval'</code>)</h3>
+
+<p>High-frequency events (<code class="language-plaintext highlighter-rouge">mouseover</code>, <code class="language-plaintext highlighter-rouge">scroll</code>, etc.) are aggregated over <code class="language-plaintext highlighter-rouge">resolution</code> ms windows into <code class="language-plaintext highlighter-rouge">interval</code> logs with <code class="language-plaintext highlighter-rouge">startTime</code>, <code class="language-plaintext highlighter-rouge">endTime</code>, <code class="language-plaintext highlighter-rouge">duration</code>, and <code class="language-plaintext highlighter-rouge">count</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"div.feed"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"div.feed"</span><span class="p">,</span><span class="w"> </span><span class="s2">"body"</span><span class="p">,</span><span class="w"> </span><span class="s2">"html"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"pageUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://apache.org/"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pageTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome to The Apache Software Foundation!"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pageReferrer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"browser"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"browser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chrome"</span><span class="p">,</span><span class="w"> </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"125.0.0"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1729720562000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1729720562480</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mouseover"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"logType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"interval"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"targetChange"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"typeChange"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"userAction"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"me"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"toolVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.5.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"toolName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apache UserALE Example"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"useraleVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.4.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sessionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"session_1727742067433"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"httpSessionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"298926d0ffe8085dc0f7c421dbad9c3a"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"browserSessionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d43400275c1f4f04f1ce74da7d0cd3c8"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="dom-mutation-rage-click--session-replay-logs-104">DOM Mutation, Rage-Click &amp; Session Replay Logs (<code class="language-plaintext highlighter-rouge">#104</code>)</h3>
+
+<p>When <code class="language-plaintext highlighter-rouge">startSessionReplay</code> or <code class="language-plaintext highlighter-rouge">observeMutations: true</code> is active:</p>
 <ul>
-  <li>how people think about the information on your site or app</li>
-  <li>understanding efficiency in information discovery</li>
-  <li>and for gauging how novices explore pages compared to experts or superusers.</li>
+  <li><strong>DOM Mutation Summary (<code class="language-plaintext highlighter-rouge">logType: 'mutation'</code>, <code class="language-plaintext highlighter-rouge">type: 'mutation'</code>)</strong>: Emits throttled structural DOM mutation counts in <code class="language-plaintext highlighter-rouge">details</code> (<code class="language-plaintext highlighter-rouge">{ addedCount, removedCount, attributeCount, targets }</code>).</li>
+  <li><strong>Rage-Click Event (<code class="language-plaintext highlighter-rouge">logType: 'custom'</code>, <code class="language-plaintext highlighter-rouge">type: 'rage_click'</code>)</strong>: Emits when 3+ rapid clicks occur on the same target within <code class="language-plaintext highlighter-rouge">1000ms</code> and <code class="language-plaintext highlighter-rouge">30px</code> radius, including <code class="language-plaintext highlighter-rouge">clickCount</code> and <code class="language-plaintext highlighter-rouge">targetRect</code>.</li>
+  <li><strong>Session Replay Envelope (<code class="language-plaintext highlighter-rouge">logType: 'replay'</code>, <code class="language-plaintext highlighter-rouge">type: 'session_replay'</code>)</strong>: Emits rolling <code class="language-plaintext highlighter-rouge">rrweb</code> frames (<code class="language-plaintext highlighter-rouge">frames</code>, <code class="language-plaintext highlighter-rouge">frameCount</code>, <code class="language-plaintext highlighter-rouge">startTime</code>, <code class="language-plaintext highlighter-rouge">endTime</code>, <code class="language-plaintext highlighter-rouge">trigger</code>) correlated with <code class="language-plaintext highlighter-rouge">sessionId</code> and active <code class="language-plaintext highlighter-rouge">traceId</code>/<code class="language-plaintext highlighter-rouge">spanId</code>.</li>
 </ul>
 
-<p>In order to do workflow analysis, UserALE.js generates granular data about interactions with page elements.</p>
+<hr />
 
-<p>This is a standard UserALE.js log from our <a href="https://github.com/apache/incubator-flagon-useralejs/blob/master/example/index.html">example test utility</a>:</p>
+<h2 id="2-opentelemetry-otlpjson-schema-exportertype-otlp">2. OpenTelemetry OTLP/JSON Schema (<code class="language-plaintext highlighter-rouge">exporterType: 'otlp'</code>)</h2>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "microTime": 0.185,
-    "minor_ver": "0",
-    "@timestamp": "2019-06-28T16:00:20.790Z",
-    "type": "click",
-    "target": "button#test_button",
-    "details": {
-      "clicks": 13,
-      "shift": false,
-      "meta": false,
-      "alt": false,
-      "ctrl": false
-    },
-    "major_ver": "2",
-    "toolVersion": "2.1.1",
-    "pageReferrer": "",
-    "clientTime": 1561737620520,
-    "userAction": true,
-    "location": {
-      "x": 40,
-      "y": 19
-    },
-    "host": "172.18.0.1",
-    "path": [
-      "button#test_button",
-      "div.container",
-      "body",
-      "html",
-      "#document",
-      "Window"
-    ],
-    "sessionID": "session_1561737570573",
-    "toolName": "Apache UserALE.js Example",
-    "pageTitle": "UserAleJS - Example Page",
-    "logType": "raw",
-    "pageUrl": "file:///Users/jpoore/Documents/Apache_Flagon/test/incubator-flagon-useralejs/example/index.html",
-    "userId": "example-user",
-    "useraleVersion": "2.1.1",
-    "patch_ver": "0"
-    ]
+<p>When <code class="language-plaintext highlighter-rouge">exporterType: 'otlp'</code> (or <code class="language-plaintext highlighter-rouge">data-exporter="otlp"</code>) is enabled, <code class="language-plaintext highlighter-rouge">OtlpJsonExporter</code> serializes each batch into an OpenTelemetry <code class="language-plaintext highlighter-rouge">ExportLogsServiceRequest</code> JSON payload:</p>
 
-</code></pre></div></div>
+<ul>
+  <li><strong>Resource Attributes (<code class="language-plaintext highlighter-rouge">resourceLogs[].resource.attributes</code>)</strong>: Constant session/device metadata is hoisted once per batch:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">service.name</code> $\leftarrow$ <code class="language-plaintext highlighter-rouge">toolName</code> (defaults to <code class="language-plaintext highlighter-rouge">"unknown_service:userale"</code>)</li>
+      <li><code class="language-plaintext highlighter-rouge">service.version</code> $\leftarrow$ <code class="language-plaintext highlighter-rouge">toolVersion</code></li>
+      <li><code class="language-plaintext highlighter-rouge">telemetry.sdk.name</code> $\leftarrow$ <code class="language-plaintext highlighter-rouge">"apache-flagon-userale"</code></li>
+      <li><code class="language-plaintext highlighter-rouge">telemetry.sdk.language</code> $\leftarrow$ <code class="language-plaintext highlighter-rouge">"webjs"</code></li>
+      <li><code class="language-plaintext highlighter-rouge">telemetry.sdk.version</code> $\leftarrow$ <code class="language-plaintext highlighter-rouge">useraleVersion</code></li>
+      <li><code class="language-plaintext highlighter-rouge">user_agent.original</code> $\leftarrow$ <code class="language-plaintext highlighter-rouge">userAgent</code></li>
+      <li><code class="language-plaintext highlighter-rouge">browser.name</code>, <code class="language-plaintext highlighter-rouge">browser.version</code> $\leftarrow$ <code class="language-plaintext highlighter-rouge">browser</code></li>
+      <li><code class="language-plaintext highlighter-rouge">session.id</code> $\leftarrow$ <code class="language-plaintext highlighter-rouge">sessionId</code></li>
+      <li><code class="language-plaintext highlighter-rouge">flagon.http_session_id</code>, <code class="language-plaintext highlighter-rouge">flagon.browser_session_id</code></li>
+      <li><code class="language-plaintext highlighter-rouge">screen.width</code>, <code class="language-plaintext highlighter-rouge">screen.height</code> $\leftarrow$ <code class="language-plaintext highlighter-rouge">scrnRes</code></li>
+    </ul>
+  </li>
+  <li><strong>LogRecord Fields (<code class="language-plaintext highlighter-rouge">scopeLogs[].logRecords[]</code>)</strong>:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">timeUnixNano</code> / <code class="language-plaintext highlighter-rouge">observedTimeUnixNano</code>: 64-bit nanosecond string computed with <code class="language-plaintext highlighter-rouge">BigInt</code> (<code class="language-plaintext highlighter-rouge">clientTime * 1_000_000 + subMsNanos</code>)</li>
+      <li><code class="language-plaintext highlighter-rouge">eventName</code>: <code class="language-plaintext highlighter-rouge">"userale.&lt;logType&gt;.&lt;type&gt;"</code> (e.g. <code class="language-plaintext highlighter-rouge">"userale.raw.click"</code>, <code class="language-plaintext highlighter-rouge">"userale.interval.mouseover"</code>)</li>
+      <li><code class="language-plaintext highlighter-rouge">traceId</code> / <code class="language-plaintext highlighter-rouge">spanId</code>: Populated from <code class="language-plaintext highlighter-rouge">log.traceId</code>/<code class="language-plaintext highlighter-rouge">log.spanId</code> or <code class="language-plaintext highlighter-rouge">config.traceContext()</code></li>
+      <li><code class="language-plaintext highlighter-rouge">body</code>: Structured <code class="language-plaintext highlighter-rouge">kvlistValue</code> representation of <code class="language-plaintext highlighter-rouge">log.details</code></li>
+      <li><code class="language-plaintext highlighter-rouge">attributes</code>: <code class="language-plaintext highlighter-rouge">event.name</code>, <code class="language-plaintext highlighter-rouge">url.full</code>, <code class="language-plaintext highlighter-rouge">page.title</code>, <code class="language-plaintext highlighter-rouge">page.referrer</code>, <code class="language-plaintext highlighter-rouge">user.id</code>, <code class="language-plaintext highlighter-rouge">flagon.log_type</code>, <code class="language-plaintext highlighter-rouge">flagon.event_type</code>, <code class="language-plaintext highlighter-rouge">flagon.target</code>, <code class="language-plaintext highlighter-rouge">flagon.path</code> (<code class="language-plaintext highlighter-rouge">arrayValue</code>), <code class="language-plaintext highlighter-rouge">flagon.user_action</code>, <code class="language-plaintext highlighter-rouge">flagon.location.x</code>, <code class="language-plaintext highlighter-rouge">flagon.location.y</code>, <code class="language-plaintext highlighter-rouge">flagon.target_rect</code> (<code class="language-plaintext highlighter-rouge">kvlistValue</code>), <code class="language-plaintext highlighter-rouge">flagon.element.attributes</code>, <code class="language-plaintext highlighter-rouge">flagon.element.style</code>, and interval metrics (<code class="language-plaintext highlighter-rouge">flagon.interval.count</code>, <code class="language-plaintext highlighter-rouge">flagon.interval.duration_ms</code>, <code class="language-plaintext highlighter-rouge">flagon.interval.start_time_ms</code>, <code class="language-plaintext highlighter-rouge">flagon.interval.end_time_ms</code>, <code class="language-plaintext highlighter-rouge">flagon.interval.target_change</code>, <code class="language-plaintext highlighter-rouge">flagon.interval.type_change</code>)</li>
+    </ul>
+  </li>
+</ul>
 
-<p>It’s a lot, but it makes sense in context.</p>
+<hr />
 
-<h3 id="useralejs-event-tracking">UserALE.js Event Tracking</h3>
+<h2 id="3-protobuf-v1-canonical-json-schema-exportertype-proto-json">3. Protobuf v1 Canonical JSON Schema (<code class="language-plaintext highlighter-rouge">exporterType: 'proto-json'</code>)</h2>
 
-<p>The fields dentify what users do and what they interact with. UserALE.js gets this information from anywhere on a page/app without using a ton of hooks.</p>
+<p>When <code class="language-plaintext highlighter-rouge">exporterType: 'proto-json'</code> is configured, <code class="language-plaintext highlighter-rouge">ProtoJsonExporter</code> serializes each batch into canonical Proto3 JSON conforming to <a href="https://github.com/apache/flagon/blob/master/proto/apache/flagon/userale/v1/log.proto"><code class="language-plaintext highlighter-rouge">proto/apache/flagon/userale/v1/log.proto</code></a> (<code class="language-plaintext highlighter-rouge">apache.flagon.userale.v1.LogBatch</code>), grouping common context into <code class="language-plaintext highlighter-rouge">metadata</code> (<code class="language-plaintext highlighter-rouge">CommonMetadata</code>) and using the <code class="language-plaintext highlighter-rouge">raw</code>, <code class="language-plaintext highlighter-rouge">interval</code>, or <code class="language-plaintext highlighter-rouge">custom</code> <code class="language-plaintext highlighter-rouge">oneof</code> variant on each <code class="language-plaintext highlighter-rouge">UserALELog</code>.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "type": "click", [this field documents the kind of user behavior observed]
-    "target": "button#test_button", [this field documents the site/app element a user interacted with]
-    "path": [  {this is the DOM path to the "target" element, which is critical for disambiguation between elements}
-      "button#test_button",
-      "div.container",
-      "body",
-      "html",
-      "#document",
-      "Window"]
+<hr />
 
-</code></pre></div></div>
-
-<p>You may want to specially label some of these fields and important elements that. See our guide on <a href="/docs/useralejs/API">the UserALE.js API</a>.</p>
-
-<p>For more information about the kinds of behaviors (event classes) we collect, check out our guide for 
-<a href="/docs/useralejs/modifying">modifying UserALE.js source code</a>.</p>
-
-<h3 id="temporal-handling-in-useralejs">Temporal Handling in UserALE.js</h3>
-
-<p>Time is a very important concept in UserALE.js. Below are the fields related to temporal data capture:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "clientTime": 1561737620520,    [UserALE.js collects time from the client when a log is generated]
-    "microTime": 0.185,             [When a log is wrtten, we write microtime too, not every database parses it]
-    "@timestamp": "2019-06-28T16:00:20.790Z", [If you use our Elastic backend, you will see indexing time too]
-</code></pre></div></div>
-
-<h3 id="useralejs-meta-data">UserALE.js Meta-Data</h3>
-
-<p>You want context? We have all of the things for all of your events:</p>
-
-<h4 id="event-context">Event Context</h4>
-
-<p>Every event has a little nuance, UserALE.js gets it all.</p>
-
-<p>UserALE.js will add to details the number of rapid, consecutive clicks on a single element.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "details": {
-      "clicks": 13,
-      "shift": false,
-      "meta": false,
-      "alt": false,
-      "ctrl": false
-    },
-</code></pre></div></div>
-
-<p>You’ll get location of the cursor two for mouseover and click data, too!</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "location": {
-      "x": 40,
-      "y": 19
-    },
-</code></pre></div></div>
-
-<p><a href="https://github.com/apache/incubator-flagon-useralejs/tree/master/build">UserALE.js’ WebExtension</a> is deployed directly 
-into your browser, as a result you’ll get browser events.</p>
-
-<p>Examples are below,you’ll see our details field has some pretty useful data from the browser.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "details": {
-      "audible": false, [audio media on the page?]
-      "title": "Discover - Kibana",
-      "selected": true, 
-      "tabId": 64, [uniquely tracks each tab] 
-      "windowId": 73, [uniquely tracks each window]
-      "muted": false,
-      "index": 0,
-      "incognito": false, [private browsing?]
-      "url": "http://localhost:5601/app/kibana#/discover?_g=(refreshInterval:(pause:!t)",
-      "active": true, []tab is active?[]
-      "pinned": false
-    },
-</code></pre></div></div>
-
-<h4 id="pageapp-context">Page/App Context</h4>
-
-<p>If a user clicks on a thing and you know nothing about that thing, you’re toast!</p>
-
-<p>UserALE.js gives a lot context about your page or app. Some are automatically grabbed from the page, some are 
-configurable through our <a href="/docs/useralejs">script tag</a></p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "toolVersion": "2.1.1", [you can give a semantic versioning of your page or tool]
-    "pageReferrer": "", [grabbed from the page, from which page did your users find your page/app]
-    "toolName": "Apache UserALE.js Example", [give your tool an alis through our script tag]
-    "pageTitle": "UserAleJS - Example Page", [page title grabbed from page]
-    "pageUrl": "file:///Users/jpoore/Documents/Apache_Flagon/test/incubator-flagon-useralejs/example/index.html" 
-</code></pre></div></div>
-
-<p>To find out more and how to change the context attached to event logs, check out our 
-<a href="/docs/useralejs/modifying">modifying UserALE.js source code</a> guide.</p>
-
-<h4 id="user-context">User Context</h4>
-
-<p>UserALE.js has its own methods for gathering user context, and it can integrate with other methods you might have 
-(e.g., cookies)</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "sessionID": "session_1561737570573", [This session ID is unique to a specific page visit]
-    "userId": "example-user", [You can also pass a unique userId]
-    "host": "172.18.0.1", [IP address]
-</code></pre></div></div>
-
-<p>To see how to pass in a userId from a url, check out our <a href="/docs/useralejs">script tag docs</a>.</p>
-
-<p>Other things you might want to do (e.g., cookies) can also be passed to userId via <a href="/docs/useralejs/API">the UserALE.js API</a> 
-<code class="highlighter-rouge">mapping</code> function.</p>
-
-<h2 id="useralejs-log-types">UserALE.js Log Types</h2>
-
-<p>For the most part, UserALE.js logs are uniform. However, there are some variations based on the type of log.</p>
-
-<h3 id="webextension-logs">WebExtension Logs</h3>
-
-<p>WebExtension logs from page-level events will look identical to the logs from our script tag method.</p>
-
-<p>Our WebExtension logs from browser-level events, including focus, activation, and zoom events:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"host": "172.18.0.1",
-    "path": null,
-    "microTime": 0.835,
-    "@timestamp": "2019-06-28T18:05:03.681Z",
-    "sessionID": "session_1561741679119",
-    "type": "browser.tabs.onZoomChange",
-    "target": null,
-    "details": {
-      "audible": false,
-      "oldZoomFactor": 1,
-      "selected": true,
-      "tabId": 64,
-      "title": "Discover - Kibana",
-      "windowId": 73,
-      "newZoomFactor": 1,
-      "muted": false,
-      "index": 0,
-      "incognito": false,
-      "url": "http://localhost:5601/app/kibana#/discover?_g=(refreshInterval:(pause:!t),
-      "active": true,
-      "pinned": false
-    },
-    "toolName": null,
-    "toolVersion": null,
-    "clientTime": 1561745100028,
-    "userAction": true,
-    "logType": "raw",
-    "tags": [
-      "_grokparsefailure"
-    ],
-    "location": null,
-    "userId": "nobody",
-    "useraleVersion": null
-  },
-
-</code></pre></div></div>
-
-<h3 id="interval-logs">Interval Logs</h3>
-
-<p>Interval logs are a experimental feature, that write long sequences of the same event to windows. They capture high resolution data like ‘mouseovers’ in time-boxed summary windows.</p>
-
-<p>Interval logs have a start- and end-time instead of a single, discrete time-stamp.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "endTime": 1561739434516, [end interval]
-    "minor_ver": "0",
-    "@timestamp": "2019-06-28T16:30:35.734Z",
-    "type": "mouseover",
-    "target": "html", [where were mouseovers observed within the interval]
-    "targetChange": true,
-    "major_ver": "2",
-    "count": 10, [count of disrcete events within the interval] 
-    "pageReferrer": "",
-    "toolVersion": "2.1.1",
-    "userAction": false,
-    "duration": 396, [duration of interval in ms]
-    "host": "172.18.0.1",
-    "path": [
-      "html",
-      "#document",
-      "Window"
-    ],
-    "sessionID": "session_1561737570573",
-    "toolName": "Apache UserALE.js Example",
-    "startTime": 1561739434120, [begin interval]
-    "typeChange": true, [were there any other events during the interval?]
-    "pageTitle": "UserAleJS - Example Page",
-    "logType": "interval", [as compared to "raw"]
-    "pageUrl": "fApache_Flagon/test/incubator-flagon-useralejs/example/index.html",
-    "userId": "example-user",
-    "useraleVersion": "2.1.1",
-    "patch_ver": "0"
-</code></pre></div></div>
 <h2 id="contributing">Contributing</h2>
 
-<p>Contributions are welcome!  Simply <a href="https://issues.apache.org/jira/browse/FLAGON">submit an issue report</a> for problems 
-you encounter or a pull request for your feature or bug fix.  The core team will review it and work with you to 
-incorporate it into UserALE.js.</p>
+<p>Contributions are welcome! See our <a href="/docs/contributing">Contributing Guide</a> or open an issue on <a href="https://github.com/apache/flagon/issues">GitHub</a>.</p>
 
   </div>
 </div>
@@ -522,64 +284,49 @@ incorporate it into UserALE.js.</p>
       <div class="column">
         <h4 class="ui inverted header">About</h4>
         <div class="ui inverted link list">
-          <a class="item" href="/stack">Stack</a>
           <a class="item" href="/userale">UserALE</a>
           <a class="item" href="/distill">Distill</a>
-          <a class="item" href="/tap">Tap</a>
-          <a class="item" href="/stout">Stout</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Docs</h4>
         <div class="ui inverted link list">
-          <a class="item" href="/docs/stack">Stack</a>
-          <a class="item" href="/docs/userale">UserALE</a>
-          <a class="item" href="/docs/useralejs">UserAle.js</a>
-          <a class="item" href="/docs/useralepy">UserAle.py</a>
+          <a class="item" href="/docs/useralejs">UserALE.js</a>
           <a class="item" href="/docs/distill">Distill</a>
-          <a class="item" href="/docs/tap">Tap</a>
-          <a class="item" href="/docs/stout">Stout</a>
+          <a class="item" href="/docs/deployments">Reference Deployments</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Community</h4>
         <div class="ui inverted link list">
-          <a class="item" href="https://github.com/apache?q=flagon">GitHub</a>
-          <a class="item" href="http://stackoverflow.com/questions/tagged/apache-flagon">StackOverflow</a>
-          <a class="item" href="https://issues.apache.org/jira/browse/FLAGON">Jira Issue Tracker</a>
-          <a class="item" href="https://cwiki.apache.org/confluence/display/FLAGON">Project Wiki</a>
-          <a class="item" href="https://twitter.com/ApacheFlagon">Twitter</a>
+          <a class="item" href="https://github.com/apache/flagon">GitHub</a>
+          <a class="item" href="https://stackoverflow.com/questions/tagged/apache-flagon">StackOverflow</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Apache</h4>
         <div class="ui inverted link list">
-          <a class="item" href="http://www.apache.org/">Apache Software Foundation</a>
-          <a class="item" href="http://www.apache.org/licenses/">License</a>
-          <a class="item" href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
-          <a class="item" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
-          <a class="item" href="http://www.apache.org/security/">Security</a>
+          <a class="item" href="https://www.apache.org/">Apache Software Foundation</a>
+          <a class="item" href="https://www.apache.org/licenses/">License</a>
+          <a class="item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+          <a class="item" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+          <a class="item" href="https://www.apache.org/security/">Security</a>
+          <a class="item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
         </div>
       </div>
     </div>
   </div>
   <div class="ui inverted vertical segment">
     <div class="ui two column middle aligned grid">
-      <div class="column">
-        Apache Flagon is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
-      </div>
       <div class="center aligned column">
-        Copyright &copy; 2021 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
-        Apache Flagon, Flagon, Apache, the Apache feather logo, the Apache Flagon logo and the Apache Incubator logo are trademarks of The Apache Software Foundation.
+        Copyright &copy; 2026 The Apache Software Foundation, Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+        Apache Flagon, Flagon, Apache, the Apache feather logo, and the Apache Flagon logo are trademarks of The Apache Software Foundation.
       </div>
     </div>
   </div>
   <div class="ui inverted vertical segment">
     <div class="ui one column middle aligned grid">
       <div class="center aligned column">
-        <a href="http://incubator.apache.org/">
-          <img src="/images/incubator-logo-white.jpg">
-        </a>&nbsp;
         <a href="https://www.apache.org/events/current-event.html">
           <img src="https://www.apache.org/events/current-event-234x60.png" alt="ASF Current Event">
         </a>

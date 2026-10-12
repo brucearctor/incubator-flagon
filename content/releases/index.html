@@ -10,13 +10,13 @@
   <meta name="description" content="The homepage for Apache Flagon">
 
   <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/assets/jquery.min.js"></script>
   <script src="/semantic/dist/semantic.min.js"></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/assets/d3.v4.min.js"></script>
   <script src="/js/main.js"></script>
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://flagon.incubator.apache.org/releases/">
+  <link rel="canonical" href="https://flagon.apache.org/releases/">
   <link rel="alternate" type="application/rss+xml" title="Apache Flagon" href="/feed.xml">
 
   
@@ -35,23 +35,15 @@
       <div class="ui dropdown item">
         Products
         <div class="menu">
-          <a class="item" href="/stack">Stack</a>
           <a class="item" href="/userale">UserALE</a>
           <a class="item" href="/distill">Distill</a>
-          <a class="item" href="/tap">Tap</a>
-          <a class="item" href="/stout">Stout</a>
         </div>
       </div>
       <div class="ui dropdown item">
         <a href="/docs">Docs</a>
         <div class="menu">
-          <a class="item" href="/docs/stack">Stack</a>
-          <a class="item" href="/docs/userale">UserALE</a>
           <a class="item" href="/docs/useralejs">UserALE.js</a>
-          <a class="item" href="/docs/useralepy">UserALE.py</a>
           <a class="item" href="/docs/distill">Distill</a>
-          <a class="item" href="/docs/tap">Tap</a>
-          <a class="item" href="/docs/stout">Stout</a>
         </div>
       </div>
       <a class="item" href="/releases">Releases</a>
@@ -68,9 +60,9 @@
   </h1>
   <div class="page-content">
     <p xmlns="http://www.w3.org/1999/html">
-  Below you can find the official Apache Flagon release distrbution artifacts. Older releases can be found at the <a href="https://downloads.apache.org/incubator/flagon">Apache Flagon (Incubating) Archive</a>.
+  Below you can find the official Apache Flagon release distribution artifacts. Older releases can be found at the <a href="https://archive.apache.org/dist/flagon/">Apache Flagon Archive</a>.
   
-    For ongoing developments and future release announcements follow our <a href="https://github.com/apache?q=flagon">source code</a> and sign up for our <a href="../community">mailing lists</a> to keep up to date!
+    For ongoing developments and future release announcements follow our <a href="https://github.com/apache/flagon">source code</a> and sign up for our <a href="../community">mailing lists</a> to keep up to date!
 </p>
 
 <p>
@@ -81,16 +73,28 @@
   Apache Flagon artifacts are always distributed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, version 2.0</a>.
 </p>
 
-<h1>Apache Flagon UserALE.js (Incubating) version 2.2.0</h1>
+<h1>Apache Flagon UserALE.js version 2.4.0</h1>
 
 <p>
     Apache Flagon UserALE.js is a client side instrumentation library written in JavaScript designed for easy deployment and lightweight configuration in gathering logs from your web applications for user behavioral analytics.
 </p>
 
 <p>
-    To explore changes in our latest release, please see our <a href="https://github.com/apache/incubator-flagon-useralejs/blob/master/CHANGELOG.md">CHANGELOG</a>.
+    To explore changes in our latest release, please see our <a href="https://github.com/apache/flagon/blob/master/products/userale/packages/flagon-userale/CHANGELOG.md">CHANGELOG</a>.
 
     Please note, that for convenience, we make UserALE.js available through the NPM <a href="https://www.npmjs.com/package/flagon-userale">'flagon-userale'</a> package.
+</p>
+
+<h1>Apache Flagon Distill version 0.1.0</h1>
+
+<p>
+  Apache Flagon Distill is a python package to support and analyze Flagon UserAle.js logs.
+</p>
+
+<p>
+    To explore changes in our latest release, please see our <a href="https://github.com/apache/flagon/blob/master/products/distill/CHANGELOG.md">CHANGELOG</a>.
+
+    Please note, that for convenience, we make Distill available through the PyPi <a href="https://pypi.org/project/flagon-distill/">'flagon-distill'</a> package.
 </p>
 
 <h2>Downloads</h2>
@@ -108,24 +112,35 @@ The link in the 'Download Artifact' column below should display a default mirror
   </thead>
   <tbody>
   <tr>
-    <td><a style="padding:0 15px 0 15px;" href="http://www.apache.org/dyn/closer.lua/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-bin.tar.gz">Apache UserALE.js 2.2.0 Binaries (tar.gz)</a> </td>
-    <td><a style="padding:0 45px 0 45px;" href="https://downloads.apache.org/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-bin.tar.gz.asc">asc (tar.gz)</a> </td>
-    <td><a style="padding:0 30px 0 30px;" href="https://downloads.apache.org/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-bin.tar.gz.sha512">sha512 (tar.gz)</a> </td>
+    <td><a style="padding:0 15px 0 15px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-bin.tar.gz">Apache UserALE.js 2.4.0 Binaries (tar.gz)</a> </td>
+    <td><a style="padding:0 45px 0 45px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-bin.tar.gz.asc">asc (tar.gz)</a> </td>
+    <td><a style="padding:0 30px 0 30px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-bin.tar.gz.sha512">sha512 (tar.gz)</a> </td>
   </tr>
   <tr>
-    <td><a style="padding:0 15px 0 15px;" href="http://www.apache.org/dyn/closer.lua/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-bin.zip">Apache UserALE.js 2.2.0 Binaries (zip)</a></td>
-    <td><a style="padding:0 45px 0 45px;" href="https://downloads.apache.org/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-bin.zip.asc">asc (zip)</a></td>
-    <td><a style="padding:0 30px 0 30px;" href="https://downloads.apache.org/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-bin.zip.sha512">sha512 (zip)</a></td>
+    <td><a style="padding:0 15px 0 15px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-bin.zip">Apache UserALE.js 2.4.0 Binaries (zip)</a></td>
+    <td><a style="padding:0 45px 0 45px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-bin.zip.asc">asc (zip)</a></td>
+    <td><a style="padding:0 30px 0 30px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-bin.tar.gz.sha512">sha512 (zip)</a></td>
   </tr>
   <tr>
-    <td><a style="padding:0 15px 0 15px;" href="http://www.apache.org/dyn/closer.lua/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-src.tar.gz">Apache UserALE.js 2.2.0 Source (tar.gz)</a></td>
-    <td><a style="padding:0 45px 0 45px;" href="https://downloads.apache.org/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-src.tar.gz.asc">asc (tar.gz)</a> </td>
-    <td><a style="padding:0 30px 0 30px;" href="https://downloads.apache.org/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-src.tar.gz.sha512">sha512 (tar.gz)</a> </td>
+    <td><a style="padding:0 15px 0 15px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-src.tar.gz">Apache UserALE.js 2.4.0 Source (tar.gz)</a></td>
+    <td><a style="padding:0 45px 0 45px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-src.tar.gz.asc">asc (tar.gz)</a> </td>
+    <td><a style="padding:0 30px 0 30px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-src.tar.gz.sha512">sha512 (tar.gz)</a> </td>
   </tr>
   <tr>
-    <td><a style="padding:0 15px 0 15px;" href="http://www.apache.org/dyn/closer.lua/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-src.zip">Apache UserALE.js 2.2.0 Source (zip)</a></td>
-    <td><a style="padding:0 45px 0 45px;" href="https://downloads.apache.org/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-src.zip.asc">asc (zip)</a></td>
-    <td><a style="padding:0 30px 0 30px;" href="https://downloads.apache.org/incubator/flagon/apache-flagon-useralejs-incubating-2.2.0/apache-flagon-useralejs-incubating-2.2.0-src.zip.sha512">sha512 (zip)</a></td>
+    <td><a style="padding:0 15px 0 15px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-src.zip">Apache UserALE.js 2.4.0 Source (zip)</a></td>
+    <td><a style="padding:0 45px 0 45px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-src.zip.asc">asc (zip)</a></td>
+    <td><a style="padding:0 30px 0 30px;" href="https://dlcdn.apache.org/flagon/useralejs/2.4.0/apache-flagon-useralejs-2.4.0-src.zip.sha512">sha512 (zip)</a></td>
+  </tr>
+
+  <tr>
+    <td><a style="padding:0 15px 0 15px;" href="https://dlcdn.apache.org/flagon/distill/0.1.0/flagon_distill-0.1.0.tar.gz">Apache Distill 0.1.0 Source (tar.gz)</a> </td>
+    <td><a style="padding:0 45px 0 45px;" href="https://dlcdn.apache.org/flagon/distill/0.1.0/flagon_distill-0.1.0.tar.gz.asc">asc</a> </td>
+    <td><a style="padding:0 30px 0 30px;" href="https://dlcdn.apache.org/flagon/distill/0.1.0/flagon_distill-0.1.0.tar.gz.sha512">sha512</a> </td>
+  </tr>
+  <tr>
+    <td><a style="padding:0 15px 0 15px;" href="https://dlcdn.apache.org/flagon/distill/0.1.0/flagon_distill-0.1.0-py3-none-any.whl">Apache Distill 0.1.0 Wheel</a></td>
+    <td><a style="padding:0 45px 0 45px;" href="https://dlcdn.apache.org/flagon/distill/0.1.0/flagon_distill-0.1.0-py3-none-any.whl.asc">asc</a></td>
+    <td><a style="padding:0 30px 0 30px;" href="https://dlcdn.apache.org/flagon/distill/0.1.0/flagon_distill-0.1.0-py3-none-any.whl.sha512">sha512</a></td>
   </tr>
   </tbody>
 </table>
@@ -141,7 +156,7 @@ The link in the 'Download Artifact' column below should display a default mirror
 
 <h2>PGP Signatures</h2>
 <p>
-	The PGP signatures can be verified using PGP or GPG. First download the <a href="https://downloads.apache.org/incubator/flagon/KEYS">KEYS</a> as well as the asc signature file for the relevant distribution.
+	The PGP signatures can be verified using PGP or GPG. First download the <a href="https://downloads.apache.org/flagon/KEYS">KEYS</a> as well as the asc signature file for the relevant distribution.
 
 	<b>N.B.</b> Make sure you get these files from the main distribution directory, rather than from a mirror. Then verify the signatures using the following example</p>
 
@@ -177,64 +192,49 @@ The link in the 'Download Artifact' column below should display a default mirror
       <div class="column">
         <h4 class="ui inverted header">About</h4>
         <div class="ui inverted link list">
-          <a class="item" href="/stack">Stack</a>
           <a class="item" href="/userale">UserALE</a>
           <a class="item" href="/distill">Distill</a>
-          <a class="item" href="/tap">Tap</a>
-          <a class="item" href="/stout">Stout</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Docs</h4>
         <div class="ui inverted link list">
-          <a class="item" href="/docs/stack">Stack</a>
-          <a class="item" href="/docs/userale">UserALE</a>
-          <a class="item" href="/docs/useralejs">UserAle.js</a>
-          <a class="item" href="/docs/useralepy">UserAle.py</a>
+          <a class="item" href="/docs/useralejs">UserALE.js</a>
           <a class="item" href="/docs/distill">Distill</a>
-          <a class="item" href="/docs/tap">Tap</a>
-          <a class="item" href="/docs/stout">Stout</a>
+          <a class="item" href="/docs/deployments">Reference Deployments</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Community</h4>
         <div class="ui inverted link list">
-          <a class="item" href="https://github.com/apache?q=flagon">GitHub</a>
-          <a class="item" href="http://stackoverflow.com/questions/tagged/apache-flagon">StackOverflow</a>
-          <a class="item" href="https://issues.apache.org/jira/browse/FLAGON">Jira Issue Tracker</a>
-          <a class="item" href="https://cwiki.apache.org/confluence/display/FLAGON">Project Wiki</a>
-          <a class="item" href="https://twitter.com/ApacheFlagon">Twitter</a>
+          <a class="item" href="https://github.com/apache/flagon">GitHub</a>
+          <a class="item" href="https://stackoverflow.com/questions/tagged/apache-flagon">StackOverflow</a>
         </div>
       </div>
       <div class="column">
         <h4 class="ui inverted header">Apache</h4>
         <div class="ui inverted link list">
-          <a class="item" href="http://www.apache.org/">Apache Software Foundation</a>
-          <a class="item" href="http://www.apache.org/licenses/">License</a>
-          <a class="item" href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
-          <a class="item" href="http://www.apache.org/foundation/thanks.html">Thanks</a>
-          <a class="item" href="http://www.apache.org/security/">Security</a>
+          <a class="item" href="https://www.apache.org/">Apache Software Foundation</a>
+          <a class="item" href="https://www.apache.org/licenses/">License</a>
+          <a class="item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+          <a class="item" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+          <a class="item" href="https://www.apache.org/security/">Security</a>
+          <a class="item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
         </div>
       </div>
     </div>
   </div>
   <div class="ui inverted vertical segment">
     <div class="ui two column middle aligned grid">
-      <div class="column">
-        Apache Flagon is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
-      </div>
       <div class="center aligned column">
-        Copyright &copy; 2021 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
-        Apache Flagon, Flagon, Apache, the Apache feather logo, the Apache Flagon logo and the Apache Incubator logo are trademarks of The Apache Software Foundation.
+        Copyright &copy; 2026 The Apache Software Foundation, Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+        Apache Flagon, Flagon, Apache, the Apache feather logo, and the Apache Flagon logo are trademarks of The Apache Software Foundation.
       </div>
     </div>
   </div>
   <div class="ui inverted vertical segment">
     <div class="ui one column middle aligned grid">
       <div class="center aligned column">
-        <a href="http://incubator.apache.org/">
-          <img src="/images/incubator-logo-white.jpg">
-        </a>&nbsp;
         <a href="https://www.apache.org/events/current-event.html">
           <img src="https://www.apache.org/events/current-event-234x60.png" alt="ASF Current Event">
         </a>
